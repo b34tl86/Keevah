@@ -4,6 +4,22 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.1.0] - 2026-10-27
+
+**Cold or warm transfers, per department.** Choose for each department whether Keeva puts callers straight through, or asks your colleague first.
+
+### Added
+
+- **Cold or warm, per department.** In Settings → Departments, each department has a Transfer choice. **Cold** puts the caller straight through, which suits ring groups, queues and menus. **Warm** means Keeva asks your colleague first. Existing departments start as Warm, so nothing changes until you edit them.
+- **Colleagues answer out loud.** On a warm transfer, Keeva tells the caller she's checking and plays a soft hold tone. She rings your colleague, waits for them to speak, says who's calling and why, and asks whether they'll take the call. Only a yes puts the caller through. If the answer is no, or nobody picks up, Keeva comes back and offers to take a message. She's built to recognise voicemail, recorded menus and queue messages and to leave no caller details there; for lines a recording may answer, Cold is the safer choice.
+- **Call notes by email.** Each department can have a notes address, and you choose when notes go: Always, Ask the colleague, or Never. Notes arrive after the call, with the transcript only if your organisation includes transcripts.
+- **One try per department.** A department that didn't take the call isn't rung again in the same call.
+- **Call logs show each transfer:** for example "Sales didn't take it · Support no answer · message taken".
+
+### Upgrading
+
+- If Keevah answers calls on your phone system, warm transfers need a new step added to Asterisk. Until it's added, warm transfers take a message instead, and nobody is put through. Talk to [TechTrust](https://techtrust.ae) or your installer.
+
 ## [1.0.2] - 2026-10-27
 
 **Steadier backups, invites and knowledge.** A set of fixes found in our own reviews.
@@ -148,6 +164,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 - In production, Keevah won't start while the example secrets are still in place.
 
+[1.1.0]: https://github.com/b34tl86/Keevah/releases/tag/v1.1.0
 [1.0.2]: https://github.com/b34tl86/Keevah/releases/tag/v1.0.2
 [1.0.1]: https://github.com/b34tl86/Keevah/releases/tag/v1.0.1
 [1.0.0]: https://github.com/b34tl86/Keevah/releases/tag/v1.0.0

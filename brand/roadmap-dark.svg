@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="684" viewBox="0 0 960 684" role="img" aria-labelledby="title desc">
 <title id="title">Keevah roadmap</title>
-<desc id="desc">Keevah roadmap. v0.9 Group dashboard and reception settings (shipped); v1.0 Knowledge base and commercial launch pack: usage &amp; AI cost, AI notice, setup checklist and test calls, invites, backups, outage alerts (now); v1.1 Cold or warm transfers per department (next); v1.2 Built-in Asterisk, Keevah Connector and installers: for Windows, macOS and Linux (next); techtrust.ae product website (later); Daily-use dashboard: messages inbox, live updates, weekly reports (later); WhatsApp confirmations and alerts (later); Booking and integrations: calendars, webhooks, CRM (later); Android app for personal calls (later).</desc>
+<desc id="desc">Keevah roadmap. v0.9 Group dashboard and reception settings (shipped); v1.0 Knowledge base and commercial launch pack: usage &amp; AI cost, AI notice, setup checklist and test calls, invites, backups, outage alerts (shipped); v1.1 Cold or warm transfers per department (now); v1.2 Built-in Asterisk, Keevah Connector and installers: for Windows, macOS and Linux (next); techtrust.ae product website (later); Daily-use dashboard: messages inbox, live updates, weekly reports (later); WhatsApp confirmations and alerts (later); Booking and integrations: calendars, webhooks, CRM (later); Android app for personal calls (later).</desc>
 <style>
 text{font-family:'Fira Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;font-variant-numeric:tabular-nums}
 .head{font-size:12px;font-weight:600;letter-spacing:.06em;fill:#a9b2bc}
@@ -18,27 +18,27 @@ text{font-family:'Fira Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Int
 <text x="172" y="49" class="head">MILESTONE</text>
 <text x="816" y="49" class="head">STATUS</text>
 <rect x="58" y="96" width="4" height="532" rx="2" fill="#232930"/>
-<rect x="58" y="96" width="4" height="74" fill="#2f6b4b"/>
+<rect x="58" y="96" width="4" height="148" fill="#2f6b4b"/>
 <circle cx="60" cy="96" r="7" fill="#74d6a3"/>
 <text x="92" y="101" class="ver">v0.9</text>
 <text x="172" y="101.5" class="title">Group dashboard and reception settings</text>
 <circle cx="821" cy="96" r="5" fill="#74d6a3"/>
 <text x="834" y="101" class="st">Shipped</text>
 <rect x="25" y="128" width="910" height="1" fill="#262c33"/>
-<rect x="25" y="129" width="4" height="83" fill="#f2b705"/>
-<circle cx="60" cy="170" r="7" fill="#f2b705" stroke="#e8ebee" stroke-opacity=".8" stroke-width="1.5"/>
+<circle cx="60" cy="170" r="7" fill="#74d6a3"/>
 <text x="92" y="175" class="ver">v1.0</text>
 <text x="172" y="155" class="title">Knowledge base and commercial launch pack</text>
 <text x="172" y="176" class="detail">Usage &amp; AI cost · AI notice · setup checklist and test calls ·</text>
 <text x="172" y="196" class="detail">invites · backups · outage alerts</text>
-<circle cx="821" cy="170" r="5" fill="#f2b705" stroke="#e8ebee" stroke-opacity=".8" stroke-width="1.5"/>
-<text x="834" y="175" class="st">Now</text>
+<circle cx="821" cy="170" r="5" fill="#74d6a3"/>
+<text x="834" y="175" class="st">Shipped</text>
 <rect x="25" y="212" width="910" height="1" fill="#262c33"/>
-<circle cx="60" cy="244" r="6.25" fill="#1c2127" stroke="#e8ebee" stroke-width="1.5"/>
+<rect x="25" y="213" width="4" height="63" fill="#f2b705"/>
+<circle cx="60" cy="244" r="7" fill="#f2b705" stroke="#e8ebee" stroke-opacity=".8" stroke-width="1.5"/>
 <text x="92" y="249" class="ver">v1.1</text>
 <text x="172" y="249.5" class="title">Cold or warm transfers per department</text>
-<circle cx="821" cy="244" r="4.25" fill="#1c2127" stroke="#e8ebee" stroke-width="1.5"/>
-<text x="834" y="249" class="stq">Next</text>
+<circle cx="821" cy="244" r="5" fill="#f2b705" stroke="#e8ebee" stroke-opacity=".8" stroke-width="1.5"/>
+<text x="834" y="249" class="st">Now</text>
 <rect x="25" y="276" width="910" height="1" fill="#262c33"/>
 <circle cx="60" cy="308" r="6.25" fill="#1c2127" stroke="#e8ebee" stroke-width="1.5"/>
 <text x="92" y="313" class="ver">v1.2</text>

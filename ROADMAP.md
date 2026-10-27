@@ -2,7 +2,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="brand/roadmap-dark.svg">
-  <img alt="Keevah roadmap. v0.9 Group dashboard and reception settings: Shipped. v1.0 Knowledge base and commercial launch pack: Now. v1.1 Cold or warm transfers per department: Next. v1.2 Built-in Asterisk, Keevah Connector and installers for Windows, macOS and Linux: Next. Later: the techtrust.ae product website; the daily-use dashboard; WhatsApp confirmations and alerts; booking and integrations; the Android app for personal calls." src="brand/roadmap-light.svg">
+  <img alt="Keevah roadmap. v0.9 Group dashboard and reception settings: Shipped. v1.0 Knowledge base and commercial launch pack: Shipped. v1.1 Cold or warm transfers per department: Now. v1.2 Built-in Asterisk, Keevah Connector and installers for Windows, macOS and Linux: Next. Later: the techtrust.ae product website; the daily-use dashboard; WhatsApp confirmations and alerts; booking and integrations; the Android app for personal calls." src="brand/roadmap-light.svg">
 </picture>
 
 Where Keevah is, and where it's heading.
@@ -22,17 +22,17 @@ Follow along on the **Keevah Roadmap** board under this repository's [Projects](
 
 One dashboard for the whole group and for each organisation: calls and minutes, who's on the line, busiest times, what callers wanted and messages to return. One Settings area for opening hours, call handling, voices, data retention, the email server and sign-in security, and two-step sign-in for everyone.
 
-## Now
-
 ### v1.0 · Knowledge base and commercial launch pack
 
 Keeva answers callers from each organisation's own documents, web pages and notes, and lists the questions she couldn't answer. The launch pack adds what you need to run Keevah as a business: usage & AI cost, the AI notice on every call, a setup checklist with test calls, invites by email, nightly encrypted backups and outage alerts.
 
-## Next
+## Now
 
 ### v1.1 · Cold or warm transfers per department
 
-Each department chooses how Keeva puts callers through. Cold: straight through to the department. Warm: Keeva checks with the colleague first, and connects the caller only if they say yes. Today every transfer announces the caller to the colleague before connecting them.
+Now available. Each department chooses how Keeva puts callers through. Cold: straight through to the department. Warm: Keeva checks with the colleague first, and connects the caller only if they say yes.
+
+## Next
 
 ### v1.2 · Built-in Asterisk, Keevah Connector and installers for Windows, macOS and Linux
 

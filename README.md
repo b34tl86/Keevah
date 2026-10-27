@@ -23,7 +23,7 @@ Keevah answers your business's phone calls with an AI receptionist. Callers ring
 
 It works with the Grandstream and Yeastar phone systems you already have. One Keevah server can run reception for many organisations, each with its own receptionist, voice, opening hours and knowledge. You name the receptionist and choose from ten voices.
 
-**New in 1.0:** Keeva answers callers from each organisation's own documents, web pages and notes, and every call opens with a notice that the caller is talking to an AI. See the [changelog](CHANGELOG.md).
+**New in 1.1:** each department can have callers put through cold, straight away, or warm, where Keeva asks your colleague first. See the [changelog](CHANGELOG.md).
 
 ## Key features
 
@@ -178,14 +178,14 @@ To run Keevah for your business, on your own phone lines, talk to [TechTrust](ht
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="brand/roadmap-dark.svg">
-  <img alt="Keevah roadmap. v0.9 Group dashboard and reception settings: Shipped. v1.0 Knowledge base and commercial launch pack: Now. v1.1 Cold or warm transfers per department: Next. v1.2 Built-in Asterisk, Keevah Connector and installers for Windows, macOS and Linux: Next. Later: the techtrust.ae product website; the daily-use dashboard; WhatsApp confirmations and alerts; booking and integrations; the Android app for personal calls." src="brand/roadmap-light.svg">
+  <img alt="Keevah roadmap. v0.9 Group dashboard and reception settings: Shipped. v1.0 Knowledge base and commercial launch pack: Shipped. v1.1 Cold or warm transfers per department: Now. v1.2 Built-in Asterisk, Keevah Connector and installers for Windows, macOS and Linux: Next. Later: the techtrust.ae product website; the daily-use dashboard; WhatsApp confirmations and alerts; booking and integrations; the Android app for personal calls." src="brand/roadmap-light.svg">
 </picture>
 
 | Version | Milestone | Status |
 |---|---|---|
 | v0.9 | Group dashboard and reception settings | Shipped |
-| v1.0 | Knowledge base and commercial launch pack: usage & AI cost, AI notice, setup checklist and test calls, invites, backups, outage alerts | Now |
-| v1.1 | Cold or warm transfers per department | Next |
+| v1.0 | Knowledge base and commercial launch pack: usage & AI cost, AI notice, setup checklist and test calls, invites, backups, outage alerts | Shipped |
+| v1.1 | Cold or warm transfers per department | Now |
 | v1.2 | Built-in Asterisk, Keevah Connector and installers for Windows, macOS and Linux | Next |
 | — | techtrust.ae product website | Later |
 | — | Daily-use dashboard: messages inbox, live updates, weekly reports | Later |

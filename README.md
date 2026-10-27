@@ -4,7 +4,7 @@
 </picture>
 
 <p align="center">
-  <a href="https://github.com/b34tl86/Keevah-AI/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/b34tl86/Keevah-AI?label=release&color=262b33"></a>
+  <a href="https://github.com/b34tl86/Keevah/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/b34tl86/Keevah?label=release&color=262b33"></a>
   <img alt="Platforms: Windows, macOS and Linux" src="https://img.shields.io/badge/platforms-Windows%20%7C%20macOS%20%7C%20Linux-262b33">
   <a href="LICENSE"><img alt="Licence: proprietary" src="https://img.shields.io/badge/licence-Proprietary-262b33"></a>
 </p>
@@ -160,7 +160,7 @@ Every screenshot uses demo data: the organisations, people and calls in them are
 
 ## Editions and download
 
-Keevah comes as a **Preview** package for each system. Download the zip for yours from the [latest release](https://github.com/b34tl86/Keevah-AI/releases/latest), check it against `SHA256SUMS.txt` on the same page, then follow [Getting started](docs/getting-started.md).
+Keevah comes as a **Preview** package for each system. Download the zip for yours from the [latest release](https://github.com/b34tl86/Keevah/releases/latest), check it against `SHA256SUMS.txt` on the same page, then follow [Getting started](docs/getting-started.md).
 
 | Edition | File on the release page | Dashboard | Answers live calls |
 |---|---|---|---|
@@ -193,7 +193,7 @@ To run Keevah for your business, on your own phone lines, talk to [TechTrust](ht
 | — | Booking and integrations: calendars, webhooks, CRM | Later |
 | — | Android app for personal calls | Later |
 
-Nothing on the roadmap has a date, and plans can change. [ROADMAP.md](ROADMAP.md) says what each step means for you. Have an idea? Share it in [Discussions → Ideas](https://github.com/b34tl86/Keevah-AI/discussions/categories/ideas).
+Nothing on the roadmap has a date, and plans can change. [ROADMAP.md](ROADMAP.md) says what each step means for you. Have an idea? Share it in [Discussions → Ideas](https://github.com/b34tl86/Keevah/discussions/categories/ideas).
 
 ## FAQ
 
@@ -290,6 +290,6 @@ No. Keevah is proprietary software made by TechTrust. This repository is its pub
 
 Keevah is designed and built by [TechTrust](https://techtrust.ae). For pricing, or to run Keevah on your own phone lines, get in touch at [techtrust.ae](https://techtrust.ae).
 
-Questions and ideas go in [Discussions](https://github.com/b34tl86/Keevah-AI/discussions), and bugs in a released package in [Issues](https://github.com/b34tl86/Keevah-AI/issues). Security problems are reported privately: see [SECURITY.md](SECURITY.md). Everyone here follows the [code of conduct](CODE_OF_CONDUCT.md), and [SUPPORT.md](SUPPORT.md) says where to go for what.
+Questions and ideas go in [Discussions](https://github.com/b34tl86/Keevah/discussions), and bugs in a released package in [Issues](https://github.com/b34tl86/Keevah/issues). Security problems are reported privately: see [SECURITY.md](SECURITY.md). Everyone here follows the [code of conduct](CODE_OF_CONDUCT.md), and [SUPPORT.md](SUPPORT.md) says where to go for what.
 
 <sub>© 2026 TechTrust. All rights reserved. Keevah is proprietary software: this repository holds its releases, roadmap and documentation, not its source code. See [LICENSE](LICENSE). Screenshots use demo data; every organisation, person and phone number in them is made up. Grandstream, Yeastar, Asterisk and Google Gemini are trademarks of their respective owners.</sub>

@@ -1,6 +1,6 @@
 # Changelog
 
-What's new in each Keevah release, in plain words. Downloads and release notes are on the [releases page](https://github.com/b34tl86/Keevah-AI/releases).
+What's new in each Keevah release, in plain words. Downloads and release notes are on the [releases page](https://github.com/b34tl86/Keevah/releases).
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
@@ -103,5 +103,5 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 - In production, Keevah won't start while the example secrets are still in place.
 
-[1.0.0]: https://github.com/b34tl86/Keevah-AI/releases/tag/v1.0.0
-[0.9.0]: https://github.com/b34tl86/Keevah-AI/releases/tag/v0.9.0
+[1.0.0]: https://github.com/b34tl86/Keevah/releases/tag/v1.0.0
+[0.9.0]: https://github.com/b34tl86/Keevah/releases/tag/v0.9.0

@@ -2,7 +2,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Ideas here help decide what Keevah does next. Before you post, look at the [roadmap](https://github.com/b34tl86/Keevah-AI/blob/main/ROADMAP.md) and search the ideas already here: a 👍 on an existing one counts too.
+        Ideas here help decide what Keevah does next. Before you post, look at the [roadmap](https://github.com/b34tl86/Keevah/blob/main/ROADMAP.md) and search the ideas already here: a 👍 on an existing one counts too.
 
         **Keep customer data out:** no callers' names or numbers, transcripts or recordings.
   - type: textarea

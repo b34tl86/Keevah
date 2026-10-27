@@ -12,7 +12,7 @@
 
 Please report security problems privately. **Never open a public issue or discussion about one.**
 
-- **On GitHub:** use [private vulnerability reporting](https://github.com/b34tl86/Keevah-AI/security/advisories/new). You'll also find it under this repository's **Security** tab, as **Report a vulnerability**. Only you and TechTrust can see the report.
+- **On GitHub:** use [private vulnerability reporting](https://github.com/b34tl86/Keevah/security/advisories/new). You'll also find it under this repository's **Security** tab, as **Report a vulnerability**. Only you and TechTrust can see the report.
 - **Or through TechTrust:** get in touch at [techtrust.ae](https://techtrust.ae) and say it's a security report.
 
 Tell us:

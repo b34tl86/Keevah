@@ -6,9 +6,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for the suggestion. Have a look at the [roadmap](https://github.com/b34tl86/Keevah-AI/blob/main/ROADMAP.md) first: it may already be planned.
+        Thanks for the suggestion. Have a look at the [roadmap](https://github.com/b34tl86/Keevah/blob/main/ROADMAP.md) first: it may already be planned.
 
-        To talk an idea through with others, or to back one that's already there, use [Discussions → Ideas](https://github.com/b34tl86/Keevah-AI/discussions/categories/ideas) instead.
+        To talk an idea through with others, or to back one that's already there, use [Discussions → Ideas](https://github.com/b34tl86/Keevah/discussions/categories/ideas) instead.
 
         **Keep customer data out:** no callers' names or numbers, transcripts or recordings.
   - type: textarea

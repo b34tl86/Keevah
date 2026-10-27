@@ -2,7 +2,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        The answer may already be in [Getting started](https://github.com/b34tl86/Keevah-AI/blob/main/docs/getting-started.md) or the [FAQ](https://github.com/b34tl86/Keevah-AI#faq). Found a bug in a released package? Please [open a bug report](https://github.com/b34tl86/Keevah-AI/issues/new/choose) instead.
+        The answer may already be in [Getting started](https://github.com/b34tl86/Keevah/blob/main/docs/getting-started.md) or the [FAQ](https://github.com/b34tl86/Keevah#faq). Found a bug in a released package? Please [open a bug report](https://github.com/b34tl86/Keevah/issues/new/choose) instead.
 
         **Keep customer data out:** no callers' names or numbers, transcripts, recordings, passwords or keys.
   - type: textarea

@@ -10,7 +10,7 @@ body:
 
         **Keep customer data out.** Don't include callers' names or numbers, transcripts, call recordings, email addresses, passwords or API keys. Use made-up examples, and blank out screenshots before you attach them.
 
-        A security problem? Don't open an issue: report it privately, as [SECURITY.md](https://github.com/b34tl86/Keevah-AI/blob/main/SECURITY.md) explains. A question? Ask in [Discussions → Q&A](https://github.com/b34tl86/Keevah-AI/discussions/categories/q-a).
+        A security problem? Don't open an issue: report it privately, as [SECURITY.md](https://github.com/b34tl86/Keevah/blob/main/SECURITY.md) explains. A question? Ask in [Discussions → Q&A](https://github.com/b34tl86/Keevah/discussions/categories/q-a).
   - type: input
     id: version
     attributes:

@@ -15,7 +15,7 @@ This guide takes you from download to signing in, on Windows, macOS or Linux.
 
 ## 1. Download
 
-Open the [latest release](https://github.com/b34tl86/Keevah-AI/releases/latest) and download two files into the same folder: the zip for your system, and `SHA256SUMS.txt`.
+Open the [latest release](https://github.com/b34tl86/Keevah/releases/latest) and download two files into the same folder: the zip for your system, and `SHA256SUMS.txt`.
 
 | System | File |
 |---|---|
@@ -57,7 +57,7 @@ cd ~/Downloads
 sha256sum -c SHA256SUMS.txt --ignore-missing
 ```
 
-On macOS and Linux, a good download prints your zip's name followed by `OK`. If you don't see `OK`, don't open the zip. Download it again, and if it still doesn't match, [report it](https://github.com/b34tl86/Keevah-AI/issues/new/choose).
+On macOS and Linux, a good download prints your zip's name followed by `OK`. If you don't see `OK`, don't open the zip. Download it again, and if it still doesn't match, [report it](https://github.com/b34tl86/Keevah/issues/new/choose).
 
 ## 3. Unpack and open Keevah
 
@@ -143,8 +143,8 @@ Once it's connected, the **test call** on the Setup page proves the whole path: 
 
 ## Getting help
 
-- **Questions:** [Discussions → Q&A](https://github.com/b34tl86/Keevah-AI/discussions/categories/q-a).
-- **Bugs in a released package:** [open a bug report](https://github.com/b34tl86/Keevah-AI/issues/new/choose).
+- **Questions:** [Discussions → Q&A](https://github.com/b34tl86/Keevah/discussions/categories/q-a).
+- **Bugs in a released package:** [open a bug report](https://github.com/b34tl86/Keevah/issues/new/choose).
 - **Sales and commercial support:** [TechTrust](https://techtrust.ae).
 
 Please keep customer data out of anything you post: no callers' names or numbers, transcripts, recordings, passwords or keys.

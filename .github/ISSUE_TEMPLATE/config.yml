@@ -1,10 +1,10 @@
 blank_issues_enabled: false
 contact_links:
   - name: Questions and ideas
-    url: https://github.com/b34tl86/Keevah-AI/discussions
+    url: https://github.com/b34tl86/Keevah/discussions
     about: Ask how something works, or share an idea, in Discussions.
   - name: Report a security problem
-    url: https://github.com/b34tl86/Keevah-AI/security/advisories/new
+    url: https://github.com/b34tl86/Keevah/security/advisories/new
     about: Report it privately. Please never open a public issue about a security problem.
   - name: Sales, pricing and commercial support
     url: https://techtrust.ae

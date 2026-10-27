@@ -14,7 +14,7 @@ Where Keevah is, and where it's heading.
 
 Nothing here has a date or is a promise. The order and the details can change as we learn from the people who use Keevah. What has shipped is in the [changelog](CHANGELOG.md).
 
-Follow along on the **Keevah Roadmap** board under this repository's [Projects](https://github.com/b34tl86/Keevah-AI/projects) tab, and tell us what you need in [Discussions → Ideas](https://github.com/b34tl86/Keevah-AI/discussions/categories/ideas). A 👍 on an idea that's already there counts too.
+Follow along on the **Keevah Roadmap** board under this repository's [Projects](https://github.com/b34tl86/Keevah/projects) tab, and tell us what you need in [Discussions → Ideas](https://github.com/b34tl86/Keevah/discussions/categories/ideas). A 👍 on an idea that's already there counts too.
 
 ## Shipped
 

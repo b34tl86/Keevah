@@ -110,14 +110,50 @@ On every system: if your browser doesn't open by itself, open <http://127.0.0.1:
 
 ## 4. First-run settings
 
-<!-- LEAD: first-run settings from G4 -->
-<!--
-  To be filled in from G4's launcher before anything is published. Nothing here was guessed.
-  Likely questions for G4: what the launcher asks or creates on first start (the super admin's
-  email and password, the Gemini API key, where Keevah keeps its data), how to stop Keevah,
-  and how to update to a new version without losing data.
--->
-<!-- /LEAD -->
+The first time you open Keevah, it sets itself up in its window and asks three things. Your typing stays hidden for the key and the password.
+
+1. **Your Gemini API key**, from <https://aistudio.google.com/apikey>. You can press Enter to add it later: the dashboard works without one, but Keevah can't answer calls until you add it with `keevah setup`.
+2. **The first super admin's email address and full name.** This is the account that runs Keevah and adds organisations.
+3. **A password for it**, typed twice: at least 12 characters, with an uppercase and a lowercase letter, a digit and a symbol. It's stored only as a hash and never written to a file.
+
+Then Keevah says it's set up and starts. If you stop it partway through the questions, nothing is saved, and the next start asks again.
+
+### Where Keevah keeps your data
+
+Keevah keeps its settings, keys and data in a folder of your own, never in the program's folder:
+
+| System | Data folder |
+|---|---|
+| Windows | `%LOCALAPPDATA%\Keevah` |
+| macOS | `~/Library/Application Support/Keevah` |
+| Linux | `~/.local/share/keevah` (or `$XDG_DATA_HOME/keevah`) |
+
+In it:
+- **`keevah.env`** holds Keevah's keys and settings. On macOS and Linux only you can read it. Keep it private.
+- **`keevah.db`** is the database.
+- Uploaded knowledge, AI notice recordings and logs appear in sub-folders as you use them.
+
+**Back up `keevah.env` and `keevah.db` together.** The data can't be read without the keys. For the same reason, if Keevah finds a database without its `keevah.env`, it won't set itself up again over it.
+
+### Every time after that
+
+Keevah asks nothing. It prints where your data is and the dashboard's address, opens the dashboard, and shows **Press Ctrl+C to stop**. Ctrl+C, or closing the window, stops Keevah cleanly.
+
+Useful options (`keevah --help` lists them all):
+- `--port 8001` if something else already uses port 8000. Keevah tells you if it does.
+- `--no-browser` to start without opening the dashboard.
+- `--data-dir FOLDER` to keep the data somewhere else.
+- `keevah setup` to add or change the Gemini API key.
+
+### Updating to a new version
+
+Unzip the new version's package and open its `keevah` as before. Your data folder isn't touched, so your settings, organisations and calls carry over. Back it up first, to be safe.
+
+To start again from nothing, stop Keevah and delete the data folder. That removes everything, and the next start asks the first-run questions again.
+
+### Behind HTTPS
+
+The packages serve the dashboard over plain http on your own computer, so `keevah.env` has `COOKIE_SECURE=false`. If you put Keevah behind HTTPS, change it to `COOKIE_SECURE=true` and restart.
 
 ## 5. Sign in
 
@@ -131,7 +167,7 @@ To set up your first organisation:
 
 For your own account, open **My account** from the menu at the top right, where you can turn on two-step sign-in.
 
-On Windows and macOS, and on Linux until Asterisk is connected, the dashboard and System health will report a problem with the phone service. That's expected: there's no phone line behind Keevah yet.
+On Windows and macOS, the dashboard and System health say **Live calls are off on this computer**. That's expected, because the Preview packages answer calls only on Linux. On Linux, until Asterisk is connected, System health reports a problem with the phone system; that's expected too.
 
 ## Answering live calls
 

@@ -4,6 +4,36 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.0.1] - 2026-10-27
+
+**The first downloads, and tidier wording.** Keevah now comes as a Preview package for Windows, macOS and Linux, and a dozen small things callers hear and the dashboard shows have been put right.
+
+### Added
+
+- **Preview packages for Windows, macOS and Linux.** Each release has a zip per system (Windows x64; macOS on Apple silicon, macOS 11 or later; Linux x64 with glibc 2.35 or later, such as Ubuntu 22.04 and Debian 12) and a `SHA256SUMS.txt` to check your download. Nothing else needs installing. The dashboard runs on all three; answering live calls needs Linux with Asterisk.
+- **The `keevah` launcher.** The first start asks for a Gemini API key (you can add it later) and creates the first super admin; after that it starts Keevah and opens the dashboard. Your data stays in a folder of your own, so updating never touches it. See [Getting started](docs/getting-started.md).
+- **Open-source notices** in every package, in `THIRD-PARTY-NOTICES.txt`.
+- On Windows and macOS the dashboard says **Live calls are off on this computer**, rather than reporting a fault.
+
+### Changed
+
+- **The standard AI notice reads better:** "Hello, you're through to Keeva, the AI assistant at Harbourline Logistics. This call is transcribed." Organisations on the standard wording hear it from their next call; Keeva reads it aloud on that first call while the recording is made.
+
+### Fixed
+
+- **Names ending in "s" sound right:** "Harbourline Logistics'", not "Harbourline Logistics's", in the AI notice, in what Keeva says, and on screen. A name that already ends in "'s" is left as it is.
+- **Searching for a phone number you copied from the screen finds the call**, with or without spaces and dashes.
+- **A new organisation's usage** begins in the month it joined, not with a year of empty months.
+- **On the dashboard:**
+  - the calls chart's scale runs in whole, even steps;
+  - a near-empty day shows the plain difference ("↑ 5 calls") instead of a huge percentage, and the average call's change reads in minutes and seconds;
+  - phone numbers are grouped ("+971 50 555 0101") and never break across lines;
+  - a call's reason has one name everywhere ("Billing question");
+  - transcripts show the receptionist's name;
+  - super admins see the time zone beside each organisation's last call;
+  - on a phone, the header's controls fit in two rows.
+- **On the Test call card,** "Read the call" now looks like the link it is.
+
 ## [1.0.0] - 2026-10-26
 
 **The knowledge base and the commercial launch pack.** Keeva now answers callers from each organisation's own material, and Keevah has what an operator needs to sell it and run it as a business.
@@ -103,5 +133,6 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 - In production, Keevah won't start while the example secrets are still in place.
 
+[1.0.1]: https://github.com/b34tl86/Keevah/releases/tag/v1.0.1
 [1.0.0]: https://github.com/b34tl86/Keevah/releases/tag/v1.0.0
 [0.9.0]: https://github.com/b34tl86/Keevah/releases/tag/v0.9.0

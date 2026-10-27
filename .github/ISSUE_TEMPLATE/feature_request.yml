@@ -1,0 +1,53 @@
+name: Feature request
+description: Suggest something Keevah should do.
+title: "Request: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. Have a look at the [roadmap](https://github.com/b34tl86/Keevah-AI/blob/main/ROADMAP.md) first: it may already be planned.
+
+        To talk an idea through with others, or to back one that's already there, use [Discussions → Ideas](https://github.com/b34tl86/Keevah-AI/discussions/categories/ideas) instead.
+
+        **Keep customer data out:** no callers' names or numbers, transcripts or recordings.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The situation, in your own words.
+      placeholder: Callers often ask whether we deliver on Fridays, and…
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help?
+      description: What you'd like Keeva or the dashboard to do.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of Keevah?
+      options:
+        - Calls and the receptionist
+        - The dashboard
+        - Call logs
+        - Knowledge
+        - Settings and setup
+        - Phone systems
+        - Emails and alerts
+        - Something else
+  - type: textarea
+    id: today
+    attributes:
+      label: How do you manage today?
+      description: Any workaround you use now.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you send
+      options:
+        - label: This request contains no customer data, call recordings, transcripts, passwords or keys.
+          required: true

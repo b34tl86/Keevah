@@ -1,0 +1,33 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The answer may already be in [Getting started](https://github.com/b34tl86/Keevah-AI/blob/main/docs/getting-started.md) or the [FAQ](https://github.com/b34tl86/Keevah-AI#faq). Found a bug in a released package? Please [open a bug report](https://github.com/b34tl86/Keevah-AI/issues/new/choose) instead.
+
+        **Keep customer data out:** no callers' names or numbers, transcripts, recordings, passwords or keys.
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Keevah version
+      description: If you've installed it. It's in the name of the zip you downloaded.
+      placeholder: "1.0.0"
+  - type: dropdown
+    id: system
+    attributes:
+      label: System
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Not installed yet
+  - type: textarea
+    id: tried
+    attributes:
+      label: What you've tried
+      description: Anything you've already looked at or tried.

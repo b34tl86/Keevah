@@ -1,0 +1,88 @@
+name: Bug report
+description: Something in a released Keevah package doesn't work as it should.
+title: "Bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting this. A clear report helps us fix it sooner.
+
+        **Keep customer data out.** Don't include callers' names or numbers, transcripts, call recordings, email addresses, passwords or API keys. Use made-up examples, and blank out screenshots before you attach them.
+
+        A security problem? Don't open an issue: report it privately, as [SECURITY.md](https://github.com/b34tl86/Keevah-AI/blob/main/SECURITY.md) explains. A question? Ask in [Discussions → Q&A](https://github.com/b34tl86/Keevah-AI/discussions/categories/q-a).
+  - type: input
+    id: version
+    attributes:
+      label: Keevah version
+      description: It's in the name of the zip you downloaded, keevah-<version>-<system>.zip.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: system
+    attributes:
+      label: System
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+  - type: input
+    id: system-version
+    attributes:
+      label: System version
+      description: For example Windows 11, macOS 15 or Ubuntu 24.04.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where did it happen?
+      options:
+        - Downloading, unpacking or starting Keevah
+        - Signing in
+        - The dashboard
+        - Call logs
+        - Settings
+        - Knowledge
+        - A phone call
+        - Emails or alerts
+        - Something else
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What did you do, step by step?
+      placeholder: |
+        1. Open Settings → Organisation → Knowledge
+        2. Upload a PDF
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead
+      description: Include any error message word for word.
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or anything else
+      description: Blank out names, numbers and anything private first. Please don't attach call recordings.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you send
+      options:
+        - label: This report contains no customer data, call recordings, transcripts, passwords or keys.
+          required: true
+        - label: I searched the existing issues, and this isn't one of them.
+          required: true

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="324" viewBox="0 0 960 324" role="img" aria-labelledby="title desc">
+<title id="title">How Keevah works</title>
+<desc id="desc">A caller rings the organisation's usual number. Its Grandstream or Yeastar phone system passes the call to Keevah. Keeva answers in a natural voice, then puts the caller through, takes a message or answers from the organisation's own knowledge. The team sees every call live on the dashboard, with a log, a transcript and a summary by email.</desc>
+<style>
+text{font-family:'Fira Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif}
+.lab{font-size:12px;font-weight:600;letter-spacing:.08em;fill:#565d66}
+.title{font-size:17px;font-weight:600;fill:#16191d}
+.body{font-size:15px;fill:#565d66}
+.row{font-size:15px;fill:#16191d}
+.prow{font-size:15px;fill:#ffffff}
+</style>
+<rect x=".5" y=".5" width="959" height="323" rx="12" fill="#f3f4f1" stroke="#dcdfd8"/>
+<g transform="translate(32 32)"><rect x=".5" y=".5" width="47" height="47" rx="8.5" fill="#262b33" stroke="#3a414c"/><g transform="translate(12 12)" fill="none" stroke="#e6e9ec" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8.2 4.5H5.7A1.7 1.7 0 0 0 4 6.3C4.5 13.8 10.2 19.5 17.7 20a1.7 1.7 0 0 0 1.8-1.7v-2.5a1 1 0 0 0-.7-.95l-2.9-.95a1 1 0 0 0-1.05.3l-1.25 1.5a11.6 11.6 0 0 1-4.9-4.9l1.5-1.25a1 1 0 0 0 .3-1.05l-.95-2.9a1 1 0 0 0-.95-.7z"/><path d="M14.5 3.75a5.75 5.75 0 0 1 5.75 5.75M14.5 7.25a2.25 2.25 0 0 1 2.25 2.25"/></g></g>
+<g transform="translate(208 32)"><rect x=".5" y=".5" width="47" height="47" rx="8.5" fill="#262b33" stroke="#3a414c"/><g transform="translate(12 12)" fill="none" stroke="#e6e9ec" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="6.5" rx="1.5"/><rect x="3.5" y="13" width="17" height="6.5" rx="1.5"/><path d="M7 7.75h.01M7 16.25h.01M10.5 7.75h6.5M10.5 16.25h6.5"/></g></g>
+<g transform="translate(424 32) scale(.75)"><rect width="64" height="64" rx="12" fill="#262b33"/><rect x="17" y="16" width="7.5" height="32" fill="#f2b705"/><path d="M27.22 32 38.49 16h8.57L35.78 32l11.28 16h-8.57z" fill="#ffffff"/></g>
+<g transform="translate(684 32)"><rect x=".5" y=".5" width="47" height="47" rx="8.5" fill="#262b33" stroke="#3a414c"/><g transform="translate(12 12)" fill="none" stroke="#e6e9ec" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9h17M3.5 14.25h17M7 11.6h.01M7 16.85h.01"/><path d="M10 11.6h7M10 16.85h5" /></g></g>
+<path d="M92 56.0H196" stroke="#858b84" stroke-width="1.5"/><path d="M190 51.0l6 5-6 5" fill="none" stroke="#858b84" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M268 56.0H412" stroke="#858b84" stroke-width="1.5"/><path d="M406 51.0l6 5-6 5" fill="none" stroke="#858b84" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M484 56.0H672" stroke="#858b84" stroke-width="1.5"/><path d="M666 51.0l6 5-6 5" fill="none" stroke="#858b84" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="32" y="114" class="lab">THE CALL</text>
+<text x="32" y="140" class="title">A caller rings</text>
+<text x="32" y="164" class="body">Your usual number,</text>
+<text x="32" y="186" class="body">at any hour.</text>
+<text x="208" y="114" class="lab">YOUR PHONE SYSTEM</text>
+<text x="208" y="140" class="title">Passes it to Keevah</text>
+<text x="208" y="164" class="body">Grandstream or Yeastar,</text>
+<text x="208" y="186" class="body">over a SIP trunk.</text>
+<text x="424" y="114" class="lab">KEEVAH</text>
+<text x="424" y="140" class="title">Keeva answers</text>
+<text x="424" y="164" class="body">In a natural voice, then:</text>
+<text x="684" y="114" class="lab">YOUR TEAM</text>
+<text x="684" y="140" class="title">Sees every call</text>
+<text x="684" y="164" class="body">Live, and after it ends:</text>
+<rect x="424.5" y="184.5" width="239" height="107" rx="6" fill="#262b33" stroke="#262b33"/>
+<clipPath id="panel"><rect x="424" y="184" width="240" height="108" rx="6"/></clipPath>
+<rect x="424" y="184" width="4" height="108" fill="#f2b705" clip-path="url(#panel)"/>
+<circle cx="446" cy="202" r="4" fill="#8cc4f5"/>
+<text x="458" y="207" class="prow">Puts the caller through</text>
+<rect x="428" y="220" width="235" height="1" fill="#3a414c"/>
+<circle cx="446" cy="238" r="4" fill="#f3c064"/>
+<text x="458" y="243" class="prow">Takes a message</text>
+<rect x="428" y="256" width="235" height="1" fill="#3a414c"/>
+<circle cx="446" cy="274" r="4" fill="#74d6a3"/>
+<text x="458" y="279" class="prow">Answers from knowledge</text>
+<rect x="684.5" y="184.5" width="243" height="107" rx="6" fill="#ffffff" stroke="#dcdfd8"/>
+<circle cx="702" cy="202" r="4" fill="#565d66"/>
+<text x="714" y="207" class="row">Live on the dashboard</text>
+<rect x="685" y="220" width="242" height="1" fill="#e6e8e3"/>
+<circle cx="702" cy="238" r="4" fill="#565d66"/>
+<text x="714" y="243" class="row">Log and transcript</text>
+<rect x="685" y="256" width="242" height="1" fill="#e6e8e3"/>
+<circle cx="702" cy="274" r="4" fill="#565d66"/>
+<text x="714" y="279" class="row">Summary by email</text>
+</svg>

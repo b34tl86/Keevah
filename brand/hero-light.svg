@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-labelledby="title desc">
+<title id="title">Keevah: answers like your best colleague</title>
+<desc id="desc">Keevah, the AI phone receptionist for Grandstream and Yeastar. Beside the headline, a live call on the Keevah board: Keeva is putting a caller through to Accounts, above the organisation's 24-hour day strip.</desc>
+<style>
+text{font-family:'Fira Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;font-variant-numeric:tabular-nums}
+.eyebrow{font-size:14px;font-weight:600;letter-spacing:.08em;fill:#565d66}
+.h1{font-size:56px;font-weight:600;letter-spacing:-.02em;fill:#16191d}
+.sub{font-size:20px;fill:#565d66}
+.lab{font-size:12px;font-weight:600;letter-spacing:.06em;fill:#565d66}
+.headlab{font-size:13px;font-weight:600;letter-spacing:.06em;fill:#b9c1ca}
+.clock{font-size:15px;font-weight:600;fill:#ffffff}
+.line{font-size:17px;fill:#16191d}
+.pill{font-size:13px;font-weight:500;fill:#0b5394}
+.cap{font-size:13px;fill:#565d66}
+.scale{font-size:12px;fill:#565d66}
+</style>
+<rect x=".5" y=".5" width="1279" height="419" rx="12" fill="#f3f4f1" stroke="#dcdfd8"/>
+<g transform="translate(64 52) scale(.625)"><rect width="64" height="64" rx="12" fill="#262b33"/><rect x="17" y="16" width="7.5" height="32" fill="#f2b705"/><path d="M27.22 32 38.49 16h8.57L35.78 32l11.28 16h-8.57z" fill="#ffffff"/><path transform="translate(82 48)" fill="#16191d" d="M10.17 -32V0H3.38V-32ZM28.35 -32 17.66 -17.57 29.18 0H21.22L10.45 -17.06L21.09 -32ZM51.33 -10.27H36.02Q36.34 -6.94 37.82 -5.55Q39.3 -4.16 41.85 -4.16Q43.42 -4.16 44.81 -4.67Q46.19 -5.18 47.81 -6.29L50.54 -2.59Q46.42 0.74 41.25 0.74Q35.47 0.74 32.37 -2.73Q29.27 -6.2 29.27 -12.11Q29.27 -15.86 30.59 -18.84Q31.91 -21.83 34.43 -23.54Q36.95 -25.25 40.41 -25.25Q45.64 -25.25 48.55 -21.96Q51.47 -18.68 51.47 -12.81Q51.47 -12.35 51.33 -10.27ZM44.95 -14.66Q44.95 -20.76 40.55 -20.76Q38.52 -20.76 37.39 -19.26Q36.25 -17.76 36.02 -14.38H44.95ZM76.34 -10.27H61.04Q61.36 -6.94 62.84 -5.55Q64.32 -4.16 66.86 -4.16Q68.44 -4.16 69.82 -4.67Q71.21 -5.18 72.83 -6.29L75.56 -2.59Q71.44 0.74 66.26 0.74Q60.48 0.74 57.38 -2.73Q54.29 -6.2 54.29 -12.11Q54.29 -15.86 55.6 -18.84Q56.92 -21.83 59.44 -23.54Q61.96 -25.25 65.43 -25.25Q70.65 -25.25 73.57 -21.96Q76.48 -18.68 76.48 -12.81Q76.48 -12.35 76.34 -10.27ZM69.96 -14.66Q69.96 -20.76 65.57 -20.76Q63.53 -20.76 62.4 -19.26Q61.27 -17.76 61.04 -14.38H69.96ZM100.8 -24.51 92.94 0H85.13L77.13 -24.51H84.25L89.1 -5.13L94.05 -24.51ZM123.09 -3.7 121.7 0.65Q119.53 0.46 118.17 -0.37Q116.8 -1.2 116.06 -2.96Q113.66 0.74 108.71 0.74Q105.06 0.74 102.91 -1.36Q100.76 -3.47 100.76 -6.84Q100.76 -10.87 103.67 -12.99Q106.58 -15.12 112.04 -15.12H114.86V-16.32Q114.86 -18.59 113.84 -19.47Q112.83 -20.35 110.47 -20.35Q107.88 -20.35 103.99 -19.05L102.51 -23.44Q107.09 -25.25 111.58 -25.25Q116.57 -25.25 118.93 -23.1Q121.29 -20.95 121.29 -16.69V-6.8Q121.29 -5.36 121.7 -4.69Q122.12 -4.02 123.09 -3.7ZM114.86 -6.7V-11.38H112.69Q107.37 -11.38 107.37 -7.4Q107.37 -5.78 108.18 -4.88Q108.99 -3.98 110.51 -3.98Q113.29 -3.98 114.86 -6.7ZM147.92 -17.85V0H141.36V-16.74Q141.36 -18.73 140.66 -19.54Q139.97 -20.35 138.67 -20.35Q136.08 -20.35 133.96 -16.97V0H127.39V-34.26L133.96 -34.96V-21.73Q135.44 -23.49 137.17 -24.37Q138.9 -25.25 141.08 -25.25Q144.27 -25.25 146.1 -23.28Q147.92 -21.32 147.92 -17.85Z"/></g>
+<text x="64" y="150" class="eyebrow">AI PHONE RECEPTIONIST FOR GRANDSTREAM AND YEASTAR</text>
+<text x="62" y="214" class="h1">Answers like your</text>
+<text x="62" y="278" class="h1">best colleague.</text>
+<text x="64" y="326" class="sub">Keeva picks up in a natural voice, puts callers through,</text>
+<text x="64" y="356" class="sub">takes messages and answers from your own knowledge.</text>
+<rect x="712.5" y="52.5" width="503" height="225" rx="8" fill="#ffffff" stroke="#dcdfd8"/>
+<path d="M712 60a8 8 0 0 1 8-8h488a8 8 0 0 1 8 8v36H712z" fill="#16191d"/>
+<circle cx="734" cy="74" r="4" fill="#74d6a3"/>
+<text x="746" y="79" class="headlab">LIVE CALL · HARBOURLINE LOGISTICS</text>
+<text x="1196" y="80" class="clock" text-anchor="end">01:42</text>
+<text x="732" y="124" class="lab">CALLER</text>
+<text x="808" y="124" class="line">Hello, is anyone in accounts free?</text>
+<text x="808" y="148" class="line">It's about an invoice.</text>
+<rect x="713" y="162" width="502" height="1" fill="#e6e8e3"/>
+<text x="732" y="190" class="lab">KEEVA</text>
+<text x="808" y="190" class="line">Of course. I'll put you through to</text>
+<text x="808" y="214" class="line">Accounts now. One moment, please.</text>
+<rect x="713" y="228" width="502" height="1" fill="#e6e8e3"/>
+<rect x="732" y="240" width="214" height="26" rx="13" fill="#e2eefb"/>
+<circle cx="745" cy="253" r="3.5" fill="#0b5394"/>
+<text x="756" y="257.5" class="pill">Putting through to Accounts</text>
+<text x="1196" y="257.5" class="cap" text-anchor="end">Summary by email afterwards</text>
+<text x="712" y="308" class="lab">TODAY 00–24</text>
+<text x="1216" y="308" class="cap" text-anchor="end">11 calls · last 14:27</text>
+<rect x="712" y="320" width="504" height="16" rx="3" fill="#eceee9"/>
+<rect x="880" y="320" width="210" height="16" fill="#a9d8bc"/>
+<rect x="838" y="320" width="1" height="16" fill="#dcdfd8"/>
+<rect x="964" y="320" width="1" height="16" fill="#dcdfd8"/>
+<rect x="1090" y="320" width="1" height="16" fill="#dcdfd8"/>
+<rect x="887.4" y="320" width="2" height="16" fill="#16191d"/>
+<rect x="902.1" y="320" width="2" height="16" fill="#16191d"/>
+<rect x="914.7" y="320" width="2" height="16" fill="#16191d"/>
+<rect x="925.2" y="320" width="2" height="16" fill="#16191d"/>
+<rect x="933.6" y="320" width="2" height="16" fill="#16191d"/>
+<rect x="950.4" y="320" width="2" height="16" fill="#16191d"/>
+<rect x="967.2" y="320" width="2" height="16" fill="#16191d"/>
+<rect x="981.9" y="320" width="2" height="16" fill="#16191d"/>
+<rect x="996.6" y="320" width="2" height="16" fill="#16191d"/>
+<rect x="1007.1" y="320" width="2" height="16" fill="#16191d"/>
+<rect x="1014.5" y="320" width="2" height="16" fill="#16191d"/>
+<rect x="1016.7" y="320" width="6" height="16" fill="#f2b705" stroke="#16191d" stroke-opacity=".8" stroke-width="1"/>
+<text x="712" y="354" class="scale" text-anchor="start">00</text>
+<text x="838" y="354" class="scale" text-anchor="middle">06</text>
+<text x="964" y="354" class="scale" text-anchor="middle">12</text>
+<text x="1090" y="354" class="scale" text-anchor="middle">18</text>
+<text x="1216" y="354" class="scale" text-anchor="end">24</text>
+</svg>

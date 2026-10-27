@@ -4,6 +4,23 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.2.0] - 2026-10-27
+
+**Groundwork for roles in each organisation.** People now belong to organisations through memberships, with four roles: Owner, Admin, Manager and Staff. The pages look the same, and nobody gains a permission. The Members page, where you manage this, comes in a later release.
+
+### Changed
+
+- **Everyone moves into a membership on upgrade.** Admins become Admin, and each organisation's longest-serving active admin becomes its Owner. Viewers become Staff, keeping transcripts and without export, as today.
+- **Every organisation keeps an Owner.** Switching off the only Owner, or making them a viewer, is refused until someone else is made an Owner.
+- **Signing in needs an organisation you can use.** Your membership there must be on and accepted, and the organisation must be on. Switching an organisation off now blocks only that organisation's people; anyone who also belongs to another organisation can still sign in there.
+- **Deactivating someone on the Users page removes their access to that organisation,** and switching them back on restores it.
+- **An invite link joins only the organisation it names.**
+- **"Require two-step sign-in for admins" now covers every Owner and Admin.**
+
+### Upgrading
+
+- Back up before upgrading: on first start, Keevah moves everyone into memberships. The move runs once and is recorded in the audit log.
+
 ## [1.1.0] - 2026-10-27
 
 **Cold or warm transfers, per department.** Choose for each department whether Keeva puts callers straight through, or asks your colleague first.

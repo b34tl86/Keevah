@@ -4,6 +4,21 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.0.2] - 2026-10-27
+
+**Steadier backups, invites and knowledge.** A set of fixes found in our own reviews.
+
+### Fixed
+
+- **Backups check there's room first,** and stop before writing anything if a disk is too full, saying which one. Network drives that don't report their size are no longer refused.
+- **"Back up now" isn't used up by a refusal:** pressing it while a backup is already running doesn't start the ten-minute wait.
+- **Restoring a backup** puts the database back under its own name, whatever its file extension.
+- **Invite links and sign-in codes work exactly once,** even if two people or two tabs use the same one at the same moment. Invite links are read exactly as sent.
+- **Saving a knowledge note no longer hangs when Gemini is down:** it gives up after 14 seconds and says so, and an edit keeps the old note.
+- **More Word files can be added to the knowledge base,** including files that store their text under an unusual name. A spreadsheet or slide deck renamed to .docx is still refused.
+- **Reading picks up again after a restart:** documents left on "Reading…" are read again, one at a time, and one that stops Keevah twice is marked as failed rather than tried for ever.
+- **Test calls refuse "0000" too,** like every other emergency number, for everyone.
+
 ## [1.0.1] - 2026-10-27
 
 **The first downloads, and tidier wording.** Keevah now comes as a Preview package for Windows, macOS and Linux, and a dozen small things callers hear and the dashboard shows have been put right.
@@ -133,6 +148,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 - In production, Keevah won't start while the example secrets are still in place.
 
+[1.0.2]: https://github.com/b34tl86/Keevah/releases/tag/v1.0.2
 [1.0.1]: https://github.com/b34tl86/Keevah/releases/tag/v1.0.1
 [1.0.0]: https://github.com/b34tl86/Keevah/releases/tag/v1.0.0
 [0.9.0]: https://github.com/b34tl86/Keevah/releases/tag/v0.9.0

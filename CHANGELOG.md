@@ -4,6 +4,28 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.4.0] - 2026-11-05
+
+**Callers can ask for a person by name.** Keevah now knows your staff, not only your departments.
+
+### Added
+
+- **A staff list.** In Settings → Reception settings → Staff, add each person's name, extension and department, up to 200 people. Names can be in any language, and two people can share an extension.
+- **"Can I speak to John?"** During opening hours, Keevah puts the caller through to the person they ask for. If two people share the name, she asks which one. If nobody on the list matches, she offers a department or a message.
+- **People follow their department's settings.** A person in a department is transferred the way that department is set up, Cold or Warm, with its call notes. On a warm transfer, Keevah asks the person by name whether they'll take the call. Someone with no department gets a warm transfer and no notes.
+- **When the person can't take the call,** Keevah offers their department instead, or a message for them. The department is only rung if the caller agrees.
+- **Call logs and the dashboard show people.** Call details read "Put through to John Smith (Billing)", and the dashboard has a new "Put through to people" list.
+- **Install on a Linux server with one command.** The installer sets everything up without asking questions, then you finish in the browser: the first administrator, the Gemini key and your first organisation.
+- **The Gemini key and the phone system wiring are entered in the dashboard,** so changing them no longer means editing files on the server.
+
+### Fixed
+
+- **Warm transfers could hang up on every colleague** when the Gemini key was entered in the dashboard rather than on the server.
+
+### Upgrading
+
+- If you added people as departments to get around the department limit, move them to Staff by hand.
+
 ## [1.2.0] - 2026-10-27
 
 **Groundwork for roles in each organisation.** People now belong to organisations through memberships, with four roles: Owner, Admin, Manager and Staff. The pages look the same, and nobody gains a permission. The Members page, where you manage this, comes in a later release.

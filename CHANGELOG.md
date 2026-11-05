@@ -4,6 +4,23 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.6.0] - 2026-11-05
+
+**Keevah knows your staff when they call in, and can dial out for them.** Staff ringing from their own extension are greeted by name, and can ask Keevah to call a UAE number for them, protected by a PIN.
+
+### Added
+
+- **Staff are greeted by name.** When someone calls from an extension on your staff list, Keevah says hello by their first name. On a shared extension she asks who's calling.
+- **Keevah can dial out for your staff.** Turn it on in Settings → Reception settings → Call handling. Staff calling from their extension can then ask Keevah to call a UAE mobile or landline, or a saved contact by name, and she puts them through.
+- **A PIN for each person.** Set it in Reception settings → Staff. Staff key it in on the phone's keypad; Keevah never hears it. Wrong PINs stop dialling out, and repeated wrong PINs lock it for an hour.
+- **Only UAE numbers.** International, premium-rate and emergency numbers are never dialled.
+- **A contact list.** Settings → Contacts keeps every number your staff have dialled, with the name they gave, so next time they can just say "call Ahmed at Emaar". Admins can add, edit and remove contacts.
+- **Clear records.** Call details show who dialled which number, and every dial-out and PIN change is in the audit log.
+
+### Upgrading
+
+- Dialling out is off until you turn it on. Your phone system must let Keevah's extension make outside calls; some systems also need a digit, such as 9, for an outside line, which you can enter in the same settings.
+
 ## [1.5.1] - 2026-11-05
 
 **A fix for warm transfers.**

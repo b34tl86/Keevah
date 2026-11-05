@@ -4,6 +4,14 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.5.1] - 2026-11-05
+
+**A fix for warm transfers.**
+
+### Fixed
+
+- **When a colleague hung up first, the caller heard the fallback extension ring.** After a warm transfer, if your colleague ended the call before the caller did, Keevah sent the caller on to the fallback extension instead of ending the call. The call now ends as it should. Nothing on your phone system needs changing.
+
 ## [1.5.0] - 2026-11-05
 
 **Keevah updates itself from the dashboard.** Super admins can install new releases from System health, and every setting can be found with a search.

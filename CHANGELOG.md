@@ -4,6 +4,19 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.5.0] - 2026-11-05
+
+**Keevah updates itself from the dashboard.** Super admins can install new releases from System health, and every setting can be found with a search.
+
+### Added
+
+- **Update Keevah from the dashboard.** System health → Updates shows the newest release and what's in it. Install it now, or schedule it for a quiet hour. A backup is taken first when backups are set up, and if the update fails, the version you had is put back. Super admins see a note on the dashboard when a release is out.
+- **Search settings.** Type what you're looking for at the top of the Settings menu, or press Ctrl+K (⌘K on a Mac) anywhere: "voice", "opening hours", "SMTP". Pick a result to go straight to that setting.
+
+### Upgrading
+
+- Updating from the dashboard works on servers set up with the installer. Install this release the usual way once; later releases can then be installed from System health → Updates.
+
 ## [1.4.0] - 2026-11-05
 
 **Callers can ask for a person by name.** Keevah now knows your staff, not only your departments.

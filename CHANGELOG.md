@@ -4,6 +4,22 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.7.0] - 2026-11-06
+
+**Updates from the dashboard work with a private GitHub repository.**
+
+### Added
+
+- **GitHub access for updates.** If your copy of Keevah comes from a private GitHub repository, enter a GitHub token in System health → Updates → GitHub access. A fine-grained token with read-only access to the code is enough. Keevah tries it with GitHub before saving it, keeps it encrypted, and only ever shows its last four characters.
+
+### Changed
+
+- **A clearer message when GitHub says no.** If GitHub turns the server away, System health now says the repository is private and points you to the new setting, instead of asking you to check the internet connection.
+
+### Upgrading
+
+- A server that can't reach a private repository yet needs this one update by hand. After that, enter the token and update from the dashboard as usual.
+
 ## [1.6.0] - 2026-11-05
 
 **Keevah knows your staff when they call in, and can dial out for them.** Staff ringing from their own extension are greeted by name, and can ask Keevah to call a UAE number for them, protected by a PIN.

@@ -4,6 +4,22 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.10.0] - 2026-11-06
+
+**Settings is a page per job, instead of one long page.**
+
+### Changed
+
+- **Short settings pages, grouped by what you came to do.** The long Reception settings page is now ten short pages, and the Settings menu groups them:
+  - **Receptionist:** Voice and greeting, AI notice, Knowledge, Opening hours, Call timing.
+  - **Routing:** Departments (now with the fallback extension), Staff directory, Dialling out, Dial-out contacts.
+  - **Alerts and records:** Email summaries, Data retention (with the Danger zone), Usage.
+  - **Access:** Users, Phone system (the organisation's name, the PBX connection and its wiring).
+- **Each page has its own Save button,** and leaving with unsaved changes asks first. If a save is stopped by a setting on another page, the message names that page and links to it.
+- **Setup shows how far along you are** ("2 of 6") beside it in the menu until the required steps are done.
+- **Old links still work.** Bookmarks and links to Reception settings open the page that has that setting now, and the settings search points at the new pages.
+- "Usage & AI cost" is now **AI cost**, and Contacts is **Dial-out contacts**.
+
 ## [1.9.1] - 2026-11-06
 
 **Fixes across the dashboard, and calmer motion.**

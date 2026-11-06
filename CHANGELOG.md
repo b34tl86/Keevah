@@ -4,6 +4,14 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.8.0] - 2026-11-06
+
+**Resend a call's summary email from Call logs.**
+
+### Added
+
+- **Resend summary email.** Each call's page in Call logs has a Resend summary email button for admins. It sends the call's summary to your organisation's summary address again, even for a call the email setting skipped. If it can't send, it says why: no address set, no email server, or the server refused the message. Every resend is recorded in the audit log.
+
 ## [1.7.0] - 2026-11-06
 
 **Updates from the dashboard work with a private GitHub repository.**

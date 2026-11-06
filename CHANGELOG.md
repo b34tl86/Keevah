@@ -4,6 +4,21 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.9.1] - 2026-11-06
+
+**Fixes across the dashboard, and calmer motion.**
+
+### Fixed
+
+- **The Users page no longer crashes** when it lists someone whose role the dashboard didn't recognise. The role now shows as a plain word.
+- **A call's details panel opens at its full width**, and so does a link's pages panel in Knowledge. They had been squeezed to half their width, so buttons wrapped and long organisation names broke over several lines.
+- **Server status no longer shows a double line** along its right edge.
+
+### Changed
+
+- **Calmer motion.** Side panels slide in quickly and settle, and close a little faster. The sidebar collapses with the same smooth ease. The page behind a panel or dialog is dimmed instead of blurred, so you can still read it. With reduced motion switched on, loading spinners keep turning (slower) instead of looking frozen.
+- **On phones the fifth headline tile spans the full width** instead of sitting alone in half a row.
+
 ## [1.9.0] - 2026-11-06
 
 **Email a call to colleagues, safely.**

@@ -4,6 +4,14 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.9.0] - 2026-11-06
+
+**Email a call to colleagues, safely.**
+
+### Added
+
+- **Email to a member.** Each call's page in Call logs has an Email to a member button for admins. Pick colleagues from your organisation's members and choose what to include: caller details, summary, transcript. There's no box to type an address, so a call can't be sent outside your organisation. The transcript only goes to people allowed to read transcripts. Keevah sends only when your email server uses encryption, gives each person their own email, and records who got what in the audit log.
+
 ## [1.8.0] - 2026-11-06
 
 **Resend a call's summary email from Call logs.**

@@ -4,6 +4,14 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.10.1] - 2026-11-09
+
+**The Settings menu is easier to scan.**
+
+### Changed
+- Group titles stand out from the pages under them: full-strength text, a line between groups, and each group's pages indented beneath its title. The group you're in is marked in yellow, and screen readers name the group as you move into it. ([#18](https://github.com/b34tl86/Keevah/issues/18))
+- The menu folds its groups. Only the group of the page you're on is open, and clicking another group's title opens that one instead, so the whole menu fits on the screen without scrolling.
+
 ## [1.10.0] - 2026-11-06
 
 **Settings is a page per job, instead of one long page.**

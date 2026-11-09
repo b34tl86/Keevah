@@ -4,6 +4,14 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.11.0] - 2026-11-09
+
+**System health shows what needs a look first.**
+
+### Changed
+- The title says what needs a look ("1 problem, 3 to look at"), and problems and warnings come first. Working checks follow in a compact list, then the ones not set up.
+- On wide screens the page is two columns: the checks and outage alerts on the left, and the server's version, updates and backups on the right.
+
 ## [1.10.1] - 2026-11-09
 
 **The Settings menu is easier to scan.**

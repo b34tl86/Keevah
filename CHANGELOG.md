@@ -4,6 +4,66 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.12.0] - 2026-11-10
+
+**Roles you can shape, calls you can take, backups from the dashboard, and a receptionist that keeps its instructions to itself.**
+
+### Added
+- Callers can't get the receptionist's instructions out of it (#7).
+  - Its rules now say to keep its instructions, settings, tool names, extensions and routing to itself, and to give knowledge as short answers, never word for word.
+  - When a caller asks for the "system prompt", says "ignore your instructions" or similar, the receptionist turns them away politely and is reminded in the moment. The after-call summary also notices reworded attempts.
+  - These calls are marked "Asked for instructions" in Call logs, with what the caller said. More filters can show only these calls, and the CSV export has a column for it.
+- Send a call in progress to the fallback extension from the dashboard (#16).
+  - Open the call in Live calls and choose "Send to fallback". Keeva tells the caller she's putting them through, and the fallback rings while the caller holds.
+  - The caller is connected only once someone answers. If nobody does, Keeva comes back and offers to take a message.
+  - Turn it on per organisation in Settings → Departments, under Fallback extension; it's off until then. Owners, admins and managers can use it, one person at a time.
+  - The call log and the audit log record who did it.
+  - Upgrading: the telephony service listens on a new loopback-only port, `TELEPHONY_CONTROL_PORT` (4580 by default).
+- One login in several organisations, with a role in each (Owner, Admin, Manager, Staff) and switches for transcripts, export and departments. The members API lives under `/api/tenants/{id}/members`. Every organisation keeps at least one Owner. A new organisation can name its first Owner.
+- Settings → Members replaces Users. Invite people with a role and their access (transcripts, export, departments), change their role or access, switch them off, or remove them.
+- Organisation switcher in the header, for people in more than one organisation.
+- The Organisations list marks organisations that need an owner.
+- Accepting an invite shows the organisation first. Someone who already has an account just joins.
+- Settings → Platform → Accounts lists every login and how many organisations it belongs to.
+- New organisations can invite their first owner.
+- Backups are set up from the dashboard (#1): Settings → Backups, for super admins.
+  - Where they go: a folder on the server (or an NFS share mounted there), a network share (SMB), or cloud storage (Amazon S3, Wasabi, MinIO and other S3-compatible services). Test connection checks the location can be reached, written to and has room, and a new location is only saved once it passes. Passwords and keys are stored encrypted and never shown again.
+  - When: daily, weekly or monthly, at a time in a chosen time zone. A new schedule applies straight away.
+  - How many: the last N backups, or those from the last N days.
+  - Who hears: emails to chosen addresses (every super admin by default), on every backup or failures only. A location that can't be reached or is full opens its own outage alert.
+  - Changing the location never deletes the old backups, and the page offers to copy them to the new one.
+- Settings → Backups lists the backups with their time, size and result, and restores one from the list or from an uploaded file. The private key is used once to check the backup and never stored. Keevah then stops, swaps the files in, and starts again, putting the old files back if it doesn't come up.
+- Each server has its own id, shown on System health with its edition ("Self-hosted"). It's never in a backup, so a future licence can't travel with one.
+- Moving to a new server: restoring a backup made elsewhere brings the data, re-encrypted to the new server's key, but not the old server's passwords and keys. System health lists what to enter again. The README has the steps.
+- The packaged app can restore a backup: from the dashboard, or with `keevah restore FILE`.
+- A Receptionist role, and roles of your own (#17).
+  - Receptionist: the dashboard, live calls, call logs and transcripts, and marking messages returned. They can take a live call or send it to the fallback, but can't open settings, people, knowledge or usage, and can't export.
+  - Settings → Roles & permissions (Owners and Admins) lists the roles and how many people have each. Built-in roles can't be changed, only duplicated. A new role starts from any role or from empty; tick what it can do, each permission explained in a line.
+  - Nobody can make or give a role with a permission they don't have themselves, and permissions you don't have are shown but can't be ticked. A role someone has can't be deleted until they're moved to another.
+  - Changes to a role apply to everyone with it straight away.
+  - Pick the role when inviting someone or on their Members entry, which shows what they can do.
+  - The audit log records roles made, changed and deleted, and role changes, with the permissions before and after.
+- Take call: take a call in progress to your own phone from the dashboard (#17).
+  - Open the call in Live calls and choose "Take call". Keeva tells the caller she's putting them through, your extension rings, and the caller is connected once you answer. If you don't, Keeva takes a message.
+  - One person at a time: whoever presses second sees "Already taken by" and the name.
+  - Each person has an extension in each organisation, set on their Members entry or on My account ("My extension in …"). Without one, the dashboard asks for it first.
+  - It follows the same switch as Send to fallback; with it off, both buttons are hidden.
+  - The call log shows "Taken by Sam Lee (Receptionist) at 10:42", and the audit log records it.
+
+### Changed
+- Permissions: "manage members" is now two, "Invite people" and "Change people's roles", and there's a new "Manage roles and permissions". Owners and Admins have all three, as before. Managers can now take live calls to their own phone.
+- Someone who can view knowledge but not edit it sees it read only.
+- API: members take `role_id` (a built-in's `role` key still works) and an `extension`, and return `role_id`, `role_name`, `full_access`, `capabilities`, `extension` and `can_resend`; `role` is the built-in's key or `custom`. `/auth/me` adds `role_name` and `extension`. New: `GET /api/permissions`, `/api/roles`, `POST /api/live-calls/{id}/take`, `GET /api/live-calls/options` and `PUT /auth/organisations/{id}/extension`.
+- Menus, pages and buttons follow what each person may do in the organisation they're using.
+- Invites: someone who already has a Keevah account gets "You've been added to {organisation}" and joins without choosing a new password. Each organisation's invite link works on its own, and links sent before the upgrade still work.
+- `/api/users` is now for operators only: accounts across the platform.
+- Audit log: each line shows the role the person had at the time, and an organisation's log also shows its current members' sign-ins.
+- Staff can now mark messages returned, and undo it. Viewers, who became Staff, could only read the list. This is the one permission that widens in this release.
+- API: `/auth/me` adds `is_super_admin`, `memberships` and `active` (the organisation in use, with its capabilities and departments). It takes `?tenant_id=`. `role`, `tenant_id` and `tenant_name` are deprecated and will be removed.
+- Calls and the dashboard follow each person's access: someone limited to some departments sees only those departments' calls, counts and live calls (calls with no department aren't shown to them), and someone without the transcripts switch sees the summary but not the transcript.
+- A backup keeps the settings file's secrets in a separately sealed part, restored only on the server the backup came from.
+- Backups no longer need settings in `.env`. Servers that use `BACKUP_DIR` and the other `.env` settings keep working until the settings are saved in the dashboard.
+
 ## [1.11.0] - 2026-11-09
 
 **System health shows what needs a look first.**

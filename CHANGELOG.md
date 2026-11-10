@@ -4,6 +4,28 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.13.0] - 2026-11-10
+
+**Back up now, your way: one organisation or everything, saved or downloaded, labelled and kept.**
+
+### Added
+- Back up now lets you choose how the backup is made (#25), on System health → Backups and now on Settings → Backups too.
+  - What to include: everything, or one organisation. A backup of one organisation holds its data, its knowledge files and its unsaved call records, without the server's settings or keys and without anyone's password. It can't be restored on its own yet: a restore says so and changes nothing.
+  - Where to save it: the backup location, a download to your computer, or both. A download waits on the server for an hour, or until it's downloaded.
+  - A label, such as "Before moving to the new server", shown in the list of backups and in the email.
+  - Keep this backup: automatic clean-up leaves it alone until you unpin it. Up to 10 backups can be kept.
+  - Before it starts, the dialog says how big the backup will be and warns when there isn't room, when one is already running (and offers to follow it) or when one was started in the last 10 minutes.
+  - Its progress (preparing, encrypting, saving, with the size so far) shows in the dialog and on the page. Close the dialog at any time: the backup carries on and the page shows how it went.
+  - The emails say who started it and its label.
+- Settings → Backups lists manual backups with who made them and their label, and kept ones with a pin. Filter the list by All, Scheduled, Manual or Kept, download any backup (encrypted, as it's kept, with its SHA-256 checksum), and Keep or Unpin it.
+- The audit log records each manual backup's options and label, every download, and every Keep and Unpin.
+
+### Fixed
+- Settings → Backups: a folder Keevah isn't allowed into, such as one inside a home folder, no longer says it "doesn't exist". The message says why and gives the commands to make a folder Keevah can use. A folder Keevah can't write to, or a file instead of a folder, gets its own message too.
+
+### Removed
+- The Agent Office developer pages (`/office`, `/agent-office` and `/api/agent-office/*`), a visualiser of local AI coding sessions that was never part of the product and was off in production.
+
 ## [1.12.0] - 2026-11-10
 
 **Roles you can shape, calls you can take, backups from the dashboard, and a receptionist that keeps its instructions to itself.**

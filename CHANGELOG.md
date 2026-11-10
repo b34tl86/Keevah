@@ -4,6 +4,41 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.14.0] - 2026-11-10
+
+**Music and messages while callers wait, staff greeted by name every time, and tidier release notes.**
+
+### Added
+- Settings → Staff directory → Staff recognition (#28), for phone systems that dress up the extension:
+  - Prefixes to take off, such as a ring group's code or your main number, so `91023` or `+971 4 234 1023` is recognised as extension 1023.
+  - Extension length: a full number is matched by its last digits.
+  - Recognise staff by the caller ID name, when the number matches nobody (off by default).
+  - Test recognition: enter a caller ID and see who it would be greeted as, using the list and settings on the page, saved or not.
+- The Staff directory warns about extensions that are missing, not digits only, not the extension length, or shared.
+- Call logs show the caller ID received (with its caller ID name) and who it matched on the staff list: "Recognised as John Smith", "Shared extension", "Not recognised" or "the staff list wasn't loaded". A live call's card shows a recognised colleague, and its details show both. The telephony log records the raw caller ID and the result for each call.
+- The caller ID still only decides the greeting: dialling out always needs the person's PIN.
+- Waiting audio: choose what callers hear while they wait for someone (#27), in Settings → Receptionist → Waiting audio.
+  - Hold tone (the default, as before), built-in music, your own audio, or silence (with a warning that callers may think they've been cut off). Every choice can be played in the browser first.
+  - Four built-in tracks: Calm piano, Soft acoustic, Light corporate and Ambient. Keevah makes them itself for phone lines, so there's nothing to license or download.
+  - Upload MP3, WAV, M4A or OGG files, up to 20 MB and 10 minutes, with the box "I have the rights to use this audio on calls" ticked. Keevah converts each one for phone lines: one channel at the call's sample rate, the volume evened out, the silence at either end trimmed, and music made into a seamless loop. WAV works on any server; MP3, M4A and OGG need ffmpeg, which the Linux installer now adds. An upload that's in use can't be deleted until something else is chosen.
+  - Waiting messages, played between the music every so often (15 to 300 seconds), taking turns: type one and it's spoken in the receptionist's voice (recorded again when the words or the voice change), or upload a recording.
+  - Each department can play its own waiting audio, set on the Departments page, with or without the messages.
+  - It plays during warm transfers, while a call is sent to the fallback, and while a receptionist's own phone rings to take it. Music loops without a seam, sits well below speech, and fades out over a fifth of a second when the call is answered or the receptionist comes back, never with a click.
+  - Test call: ring an extension and hear the saved waiting audio, the organisation's or a department's.
+  - If an upload can't be played, callers hear the hold tone instead, and System health says which organisation is affected.
+  - Uploads are kept on the server and included in backups, both whole-server ones and backups of one organisation. Changing the waiting audio needs "Edit reception settings"; the audit log records uploads, deletions and every change.
+
+### Changed
+- System health → Updates: What's new keeps to a fixed height, so long release notes no longer stretch the page (#23). Notes that don't fit fade out, with a View release notes button (it says how many releases when there's more than one); short notes show in full.
+- The release notes open in a dialog: every release since the one installed, newest first, scrolling inside the dialog, with Update now and Schedule at the bottom. It fills the screen on a phone. See what's new on the dashboard opens the same dialog.
+- Closing the Update now and Schedule dialogs puts focus back on the button that opened them.
+
+### Fixed
+- Staff calling from their own extension are now greeted by first name every time (#28). Before, the receptionist sometimes answered them as an outside caller.
+  - The caller ID is read the same way whatever the phone system wraps it in, such as `sip:1023@pbx`, `"John Smith" <1023>` or `+971 4-234 1023`, and extensions saved with spaces or dashes still match.
+  - The colleague greeting ("Hi John") is now the receptionist's opening line itself, not only a rule she's given, including straight after the AI notice when she says it.
+  - A staff list entry the telephony service can't read no longer stops calls being answered: it's left out and logged.
+
 ## [1.13.0] - 2026-11-10
 
 **Back up now, your way: one organisation or everything, saved or downloaded, labelled and kept.**

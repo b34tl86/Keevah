@@ -4,6 +4,25 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.14.1] - 2026-11-10
+
+**The receptionist gives contact details exactly as your website has them, and never makes them up.**
+
+### Added
+- Knowledge → URL links: **See the pages and text** now has **View text** on each page, showing exactly what Keevah read from it, so you can check that contact details such as a careers email are there (#29).
+- A page that looks built by JavaScript and gave little text is flagged "Little text" in the pages list, and the link's status line counts them, for example "1 page may need JavaScript (little text read)". Keevah can't run a page's JavaScript: add what such a page says as a note.
+- Ask Keevah shows the passages its answer came from: press **Show the passages it came from** under the answer.
+
+### Fixed
+- The receptionist no longer makes up contact details (#29). On a test call, asked for the careers contact, she gave an email address built from the organisation's website instead of the one on its careers page.
+  - She now looks in the knowledge for contact details, careers, jobs and recruitment, departments and people, and anything else about the organisation her instructions don't already answer.
+  - She never makes up an email address, phone number, website, name or address. She gives them only exactly as written in her instructions or knowledge; otherwise she says she doesn't have them and offers to take a message or put the caller through.
+- URL links keep contact details they used to lose:
+  - The address or number behind an email or phone link, such as "Email us (hr@example.com)".
+  - Email addresses hidden by Cloudflare's email protection, which came through as "[email protected]".
+  - Email addresses, phone numbers and postal addresses in a site's header, footer and sidebars. The rest of the menus and footer is still left out, and the contact lines are kept once per link.
+- **Admins: press Update on each URL link** to read it again with these changes and to fill in View text. Until then a link keeps answering from what it read before.
+
 ## [1.14.0] - 2026-11-10
 
 **Music and messages while callers wait, staff greeted by name every time, and tidier release notes.**

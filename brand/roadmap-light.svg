@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="684" viewBox="0 0 960 684" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1196" viewBox="0 0 960 1196" role="img" aria-labelledby="title desc">
 <title id="title">Keevah roadmap</title>
-<desc id="desc">Keevah roadmap. v0.9 Group dashboard and reception settings (shipped); v1.0 Knowledge base and commercial launch pack: usage &amp; AI cost, AI notice, setup checklist and test calls, invites, backups, outage alerts (shipped); v1.1 Cold or warm transfers per department (now); v1.2 Built-in Asterisk, Keevah Connector and installers: for Windows, macOS and Linux (next); techtrust.ae product website (later); Daily-use dashboard: messages inbox, live updates, weekly reports (later); WhatsApp confirmations and alerts (later); Booking and integrations: calendars, webhooks, CRM (later); Android app for personal calls (later).</desc>
+<desc id="desc">Keevah roadmap. v0.9 Group dashboard and reception settings (shipped); v1.0 Knowledge base and commercial launch pack: Usage &amp; AI cost · AI notice · setup checklist and test calls · invites · backups · outage alerts (shipped); v1.1–1.9 Transfers, staff by name and updates: Cold or warm transfers · ask for a person by name · staff dial out · update from the dashboard (shipped); v1.10–1.13 Roles, live calls and backups from the dashboard: Settings a page per job · custom roles · take a live call · backups to a NAS or the cloud (shipped); v1.14–1.15 Waiting audio and safer updates: Waiting audio · staff recognition · back up before updating · roll back from the dashboard (shipped); v1.16 Calendars, contacts and integrations: Appointment booking · returning callers and Contacts · spam and robocall blocking · frustrated callers offered a person · webhooks and API · caller data requests (shipped); Arabic and other languages on calls (now); Data residency: Where call data is processed, and in-country options (now); Built-in Asterisk, Keevah Connector and installers: For Windows, macOS and Linux, with signed packages (next); Call recording: Playback, retention and a notice to callers (next); Concurrent call limits: Per organisation and per server (next); Licensing: A licence for each Keevah server (next); SMS and WhatsApp messages: Confirmations for callers, and alerts for your team (later); Themes: Your branding, colours and fonts, and ready-made themes (later); Signed updates and audited support access (later); techtrust.ae product website (later); Android app for personal calls (later).</desc>
 <style>
 text{font-family:'Fira Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;font-variant-numeric:tabular-nums}
 .head{font-size:12px;font-weight:600;letter-spacing:.06em;fill:#b9c1ca}
@@ -11,71 +11,128 @@ text{font-family:'Fira Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Int
 .st{font-size:14px;font-weight:500;fill:#16191d}
 .stq{font-size:14px;fill:#565d66}
 </style>
-<rect x=".5" y=".5" width="959" height="683" rx="12" fill="#f3f4f1" stroke="#dcdfd8"/>
-<rect x="24.5" y="24.5" width="911" height="635" rx="8" fill="#ffffff" stroke="#dcdfd8"/>
+<rect x=".5" y=".5" width="959" height="1195" rx="12" fill="#f3f4f1" stroke="#dcdfd8"/>
+<rect x="24.5" y="24.5" width="911" height="1147" rx="8" fill="#ffffff" stroke="#dcdfd8"/>
 <path d="M24 32a8 8 0 0 1 8-8h896a8 8 0 0 1 8 8v32H24z" fill="#16191d"/>
 <text x="92" y="49" class="head">VERSION</text>
-<text x="172" y="49" class="head">MILESTONE</text>
+<text x="200" y="49" class="head">MILESTONE</text>
 <text x="816" y="49" class="head">STATUS</text>
-<rect x="58" y="96" width="4" height="532" rx="2" fill="#eceee9"/>
-<rect x="58" y="96" width="4" height="148" fill="#a9d8bc"/>
+<rect x="58" y="96" width="4" height="1044" rx="2" fill="#eceee9"/>
+<rect x="58" y="96" width="4" height="404" fill="#a9d8bc"/>
 <circle cx="60" cy="96" r="7" fill="#146c43"/>
 <text x="92" y="101" class="ver">v0.9</text>
-<text x="172" y="101.5" class="title">Group dashboard and reception settings</text>
+<text x="200" y="101.5" class="title">Group dashboard and reception settings</text>
 <circle cx="821" cy="96" r="5" fill="#146c43"/>
 <text x="834" y="101" class="st">Shipped</text>
 <rect x="25" y="128" width="910" height="1" fill="#e6e8e3"/>
-<circle cx="60" cy="170" r="7" fill="#146c43"/>
-<text x="92" y="175" class="ver">v1.0</text>
-<text x="172" y="155" class="title">Knowledge base and commercial launch pack</text>
-<text x="172" y="176" class="detail">Usage &amp; AI cost · AI notice · setup checklist and test calls ·</text>
-<text x="172" y="196" class="detail">invites · backups · outage alerts</text>
-<circle cx="821" cy="170" r="5" fill="#146c43"/>
-<text x="834" y="175" class="st">Shipped</text>
-<rect x="25" y="212" width="910" height="1" fill="#e6e8e3"/>
-<rect x="25" y="213" width="4" height="63" fill="#f2b705"/>
-<circle cx="60" cy="244" r="7" fill="#f2b705" stroke="#16191d" stroke-opacity=".8" stroke-width="1.5"/>
-<text x="92" y="249" class="ver">v1.1</text>
-<text x="172" y="249.5" class="title">Cold or warm transfers per department</text>
-<circle cx="821" cy="244" r="5" fill="#f2b705" stroke="#16191d" stroke-opacity=".8" stroke-width="1.5"/>
-<text x="834" y="249" class="st">Now</text>
-<rect x="25" y="276" width="910" height="1" fill="#e6e8e3"/>
-<circle cx="60" cy="308" r="6.25" fill="#ffffff" stroke="#16191d" stroke-width="1.5"/>
-<text x="92" y="313" class="ver">v1.2</text>
-<text x="172" y="303" class="title">Built-in Asterisk, Keevah Connector and installers</text>
-<text x="172" y="324" class="detail">For Windows, macOS and Linux</text>
-<circle cx="821" cy="308" r="4.25" fill="#ffffff" stroke="#16191d" stroke-width="1.5"/>
-<text x="834" y="313" class="stq">Next</text>
-<rect x="25" y="340" width="910" height="1" fill="#e6e8e3"/>
-<circle cx="60" cy="372" r="6.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
-<text x="92" y="377" class="none">—</text>
-<text x="172" y="377.5" class="title">techtrust.ae product website</text>
-<circle cx="821" cy="372" r="4.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
-<text x="834" y="377" class="stq">Later</text>
-<rect x="25" y="404" width="910" height="1" fill="#e6e8e3"/>
-<circle cx="60" cy="436" r="6.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
-<text x="92" y="441" class="none">—</text>
-<text x="172" y="431" class="title">Daily-use dashboard</text>
-<text x="172" y="452" class="detail">Messages inbox · live updates · weekly reports</text>
-<circle cx="821" cy="436" r="4.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
-<text x="834" y="441" class="stq">Later</text>
+<circle cx="60" cy="160" r="7" fill="#146c43"/>
+<text x="92" y="165" class="ver">v1.0</text>
+<text x="200" y="155" class="title">Knowledge base and commercial launch pack</text>
+<text x="200" y="176" class="detail">Usage &amp; AI cost · AI notice · setup checklist and test calls · invites · backups · outage alerts</text>
+<circle cx="821" cy="160" r="5" fill="#146c43"/>
+<text x="834" y="165" class="st">Shipped</text>
+<rect x="25" y="192" width="910" height="1" fill="#e6e8e3"/>
+<circle cx="60" cy="224" r="7" fill="#146c43"/>
+<text x="92" y="229" class="ver">v1.1–1.9</text>
+<text x="200" y="219" class="title">Transfers, staff by name and updates</text>
+<text x="200" y="240" class="detail">Cold or warm transfers · ask for a person by name · staff dial out · update from the dashboard</text>
+<circle cx="821" cy="224" r="5" fill="#146c43"/>
+<text x="834" y="229" class="st">Shipped</text>
+<rect x="25" y="256" width="910" height="1" fill="#e6e8e3"/>
+<circle cx="60" cy="288" r="7" fill="#146c43"/>
+<text x="92" y="293" class="ver">v1.10–1.13</text>
+<text x="200" y="283" class="title">Roles, live calls and backups from the dashboard</text>
+<text x="200" y="304" class="detail">Settings a page per job · custom roles · take a live call · backups to a NAS or the cloud</text>
+<circle cx="821" cy="288" r="5" fill="#146c43"/>
+<text x="834" y="293" class="st">Shipped</text>
+<rect x="25" y="320" width="910" height="1" fill="#e6e8e3"/>
+<circle cx="60" cy="352" r="7" fill="#146c43"/>
+<text x="92" y="357" class="ver">v1.14–1.15</text>
+<text x="200" y="347" class="title">Waiting audio and safer updates</text>
+<text x="200" y="368" class="detail">Waiting audio · staff recognition · back up before updating · roll back from the dashboard</text>
+<circle cx="821" cy="352" r="5" fill="#146c43"/>
+<text x="834" y="357" class="st">Shipped</text>
+<rect x="25" y="384" width="910" height="1" fill="#e6e8e3"/>
+<circle cx="60" cy="426" r="7" fill="#146c43"/>
+<text x="92" y="431" class="ver">v1.16</text>
+<text x="200" y="411" class="title">Calendars, contacts and integrations</text>
+<text x="200" y="432" class="detail">Appointment booking · returning callers and Contacts · spam and robocall blocking ·</text>
+<text x="200" y="452" class="detail">frustrated callers offered a person · webhooks and API · caller data requests</text>
+<circle cx="821" cy="426" r="5" fill="#146c43"/>
+<text x="834" y="431" class="st">Shipped</text>
 <rect x="25" y="468" width="910" height="1" fill="#e6e8e3"/>
-<circle cx="60" cy="500" r="6.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
+<rect x="25" y="469" width="4" height="63" fill="#f2b705"/>
+<circle cx="60" cy="500" r="7" fill="#f2b705" stroke="#16191d" stroke-opacity=".8" stroke-width="1.5"/>
 <text x="92" y="505" class="none">—</text>
-<text x="172" y="505.5" class="title">WhatsApp confirmations and alerts</text>
-<circle cx="821" cy="500" r="4.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
-<text x="834" y="505" class="stq">Later</text>
+<text x="200" y="505.5" class="title">Arabic and other languages on calls</text>
+<circle cx="821" cy="500" r="5" fill="#f2b705" stroke="#16191d" stroke-opacity=".8" stroke-width="1.5"/>
+<text x="834" y="505" class="st">Now</text>
 <rect x="25" y="532" width="910" height="1" fill="#e6e8e3"/>
-<circle cx="60" cy="564" r="6.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
+<rect x="25" y="533" width="4" height="63" fill="#f2b705"/>
+<circle cx="60" cy="564" r="7" fill="#f2b705" stroke="#16191d" stroke-opacity=".8" stroke-width="1.5"/>
 <text x="92" y="569" class="none">—</text>
-<text x="172" y="559" class="title">Booking and integrations</text>
-<text x="172" y="580" class="detail">Calendars · webhooks · CRM</text>
-<circle cx="821" cy="564" r="4.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
-<text x="834" y="569" class="stq">Later</text>
+<text x="200" y="559" class="title">Data residency</text>
+<text x="200" y="580" class="detail">Where call data is processed, and in-country options</text>
+<circle cx="821" cy="564" r="5" fill="#f2b705" stroke="#16191d" stroke-opacity=".8" stroke-width="1.5"/>
+<text x="834" y="569" class="st">Now</text>
 <rect x="25" y="596" width="910" height="1" fill="#e6e8e3"/>
-<circle cx="60" cy="628" r="6.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
+<circle cx="60" cy="628" r="6.25" fill="#ffffff" stroke="#16191d" stroke-width="1.5"/>
 <text x="92" y="633" class="none">—</text>
-<text x="172" y="633.5" class="title">Android app for personal calls</text>
-<circle cx="821" cy="628" r="4.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
-<text x="834" y="633" class="stq">Later</text>
+<text x="200" y="623" class="title">Built-in Asterisk, Keevah Connector and installers</text>
+<text x="200" y="644" class="detail">For Windows, macOS and Linux, with signed packages</text>
+<circle cx="821" cy="628" r="4.25" fill="#ffffff" stroke="#16191d" stroke-width="1.5"/>
+<text x="834" y="633" class="stq">Next</text>
+<rect x="25" y="660" width="910" height="1" fill="#e6e8e3"/>
+<circle cx="60" cy="692" r="6.25" fill="#ffffff" stroke="#16191d" stroke-width="1.5"/>
+<text x="92" y="697" class="none">—</text>
+<text x="200" y="687" class="title">Call recording</text>
+<text x="200" y="708" class="detail">Playback, retention and a notice to callers</text>
+<circle cx="821" cy="692" r="4.25" fill="#ffffff" stroke="#16191d" stroke-width="1.5"/>
+<text x="834" y="697" class="stq">Next</text>
+<rect x="25" y="724" width="910" height="1" fill="#e6e8e3"/>
+<circle cx="60" cy="756" r="6.25" fill="#ffffff" stroke="#16191d" stroke-width="1.5"/>
+<text x="92" y="761" class="none">—</text>
+<text x="200" y="751" class="title">Concurrent call limits</text>
+<text x="200" y="772" class="detail">Per organisation and per server</text>
+<circle cx="821" cy="756" r="4.25" fill="#ffffff" stroke="#16191d" stroke-width="1.5"/>
+<text x="834" y="761" class="stq">Next</text>
+<rect x="25" y="788" width="910" height="1" fill="#e6e8e3"/>
+<circle cx="60" cy="820" r="6.25" fill="#ffffff" stroke="#16191d" stroke-width="1.5"/>
+<text x="92" y="825" class="none">—</text>
+<text x="200" y="815" class="title">Licensing</text>
+<text x="200" y="836" class="detail">A licence for each Keevah server</text>
+<circle cx="821" cy="820" r="4.25" fill="#ffffff" stroke="#16191d" stroke-width="1.5"/>
+<text x="834" y="825" class="stq">Next</text>
+<rect x="25" y="852" width="910" height="1" fill="#e6e8e3"/>
+<circle cx="60" cy="884" r="6.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
+<text x="92" y="889" class="none">—</text>
+<text x="200" y="879" class="title">SMS and WhatsApp messages</text>
+<text x="200" y="900" class="detail">Confirmations for callers, and alerts for your team</text>
+<circle cx="821" cy="884" r="4.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
+<text x="834" y="889" class="stq">Later</text>
+<rect x="25" y="916" width="910" height="1" fill="#e6e8e3"/>
+<circle cx="60" cy="948" r="6.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
+<text x="92" y="953" class="none">—</text>
+<text x="200" y="943" class="title">Themes</text>
+<text x="200" y="964" class="detail">Your branding, colours and fonts, and ready-made themes</text>
+<circle cx="821" cy="948" r="4.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
+<text x="834" y="953" class="stq">Later</text>
+<rect x="25" y="980" width="910" height="1" fill="#e6e8e3"/>
+<circle cx="60" cy="1012" r="6.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
+<text x="92" y="1017" class="none">—</text>
+<text x="200" y="1017.5" class="title">Signed updates and audited support access</text>
+<circle cx="821" cy="1012" r="4.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
+<text x="834" y="1017" class="stq">Later</text>
+<rect x="25" y="1044" width="910" height="1" fill="#e6e8e3"/>
+<circle cx="60" cy="1076" r="6.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
+<text x="92" y="1081" class="none">—</text>
+<text x="200" y="1081.5" class="title">techtrust.ae product website</text>
+<circle cx="821" cy="1076" r="4.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
+<text x="834" y="1081" class="stq">Later</text>
+<rect x="25" y="1108" width="910" height="1" fill="#e6e8e3"/>
+<circle cx="60" cy="1140" r="6.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
+<text x="92" y="1145" class="none">—</text>
+<text x="200" y="1145.5" class="title">Android app for personal calls</text>
+<circle cx="821" cy="1140" r="4.25" fill="#ffffff" stroke="#858b84" stroke-width="1.5"/>
+<text x="834" y="1145" class="stq">Later</text>
 </svg>

@@ -2,7 +2,7 @@
 
 This guide takes you from download to signing in, on Windows, macOS or Linux.
 
-> **Preview.** The dashboard runs on all three systems. Answering live calls needs Linux with Asterisk beside Keevah, until built-in Asterisk (v1.2, Next on the [roadmap](../ROADMAP.md)). On Windows and macOS you can set Keevah up and look around, but it can't take calls yet.
+> **Preview.** The dashboard runs on all three systems. Answering live calls needs Linux with Asterisk beside Keevah, until built-in Asterisk (Next on the [roadmap](../ROADMAP.md)). On Windows and macOS you can set Keevah up and look around, but it can't take calls yet.
 
 ## What you need
 

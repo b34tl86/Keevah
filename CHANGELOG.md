@@ -4,6 +4,53 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.16.0] - 2026-11-12
+
+**Keeva books appointments, recognises returning callers, notices frustrated callers and blocks spam; webhooks and an API connect other systems; and one caller's data can be found, exported or erased.**
+
+### Added
+- **Caller data requests** (#37), in a new **Settings → Privacy** group: find, export and erase one caller's data without touching anyone else's. *Not legal advice: check your process with your own adviser.*
+  - **Find a caller** by number (any spelling, and numbers merged into the same contact) or by name. It lists their calls (date, outcome, department, transcript, summary, message), appointments (#39), contacts, block list entries, webhook deliveries about them and calls not saved yet.
+  - **Download** everything as a JSON file: calls with transcripts, summaries and messages, appointments and contacts.
+  - **Erase**, after typing the number again: calls with their transcripts, summaries and messages, Keevah's record of their appointments, contacts saved from calls, webhook deliveries about them and unsaved call records. Contacts staff added and the block lists stay, shown as Kept. Appointment events stay in the organisation's Google or Outlook calendar, to delete there. Earlier audit lines that named the number keep what happened, with the number blanked. Dashboard and usage counts don't change.
+  - **Don't record or transcribe this number**: its calls keep only the time and outcome, and it's never saved as a contact. Only a keyed hash of the number is stored.
+  - A new permission, **Handle caller data requests** (`callers.data_requests`), for Owners and Admins, never for department-limited people. Every request is audited with a request id, who and when, never the caller's number or name.
+- **Appointment booking** with Google Calendar and Microsoft 365 / Outlook (#39). The receptionist finds free times, books, moves and cancels appointments during calls, reading the details back before confirming.
+  - **Settings → Calendar apps** (super admins): the server's own Google and Microsoft OAuth apps, with the redirect address to register and step-by-step setup in `docs/admin-and-settings.md`. Client secrets are encrypted.
+  - **Settings → Appointments** (new `appointments.manage` permission, Owners and Admins): connect calendars (the organisation's, a department's or a person's) with a secure sign-in (PKCE, a one-off state tied to your session), appointment types with length and buffers, bookable hours, how far ahead, minimum notice and start-time step. Off until a calendar is connected and a type books into it.
+  - Never double-books: the calendar is checked again right before each booking, one booking at a time per calendar, and a retried booking never makes a second event.
+  - Tokens refresh automatically; a calendar that stops working shows **Reconnect** and booking pauses for it.
+  - Callers can move or cancel bookings made by phone, found by their number and the day. A caller who gives an email gets a confirmation.
+  - **Appointments** page, and bookings on the call's page. Every connection, setting change and booking is in the audit log.
+  - Webhooks (#40) can send `appointment.booked`, `appointment.rescheduled` and `appointment.cancelled`, queued with the change itself; `docs/api.md` lists their fields.
+- **Spam and robocall blocking** (#35). Blocked callers never reach the AI and don't count as AI usage.
+  - **Settings → Blocked numbers**: each organisation's blocklist and allow list, by whole number or by prefix (such as `+234`). Numbers are matched however the phone system writes them (`+44…`, `0044…`, `050…` or `+971 50…`). Staff extensions, contacts an admin added or staff dialled, and numbers on the allow list are never blocked; a contact saved From a call (#41) can still be blocked, and a blocked number is never saved as one.
+  - **Block this number** in a call's details in Call logs, and a **Block** button on calls flagged as likely spam. Unblock in Settings → Blocked numbers.
+  - **What blocked callers get** (owners and admins): hang up (the default), a short message in the receptionist's voice (recorded once, like the AI notice), or the fallback extension. The call is decided before the AI starts.
+  - **Likely spam**: a call where the caller said nothing, very short calls again and again from one number, or many calls from one number in an hour are flagged "Likely spam" with the reason. Call logs can filter on it. **Block likely spam automatically** is off by default.
+  - **Blocked calls** are logged as "Blocked" (Call logs filter by outcome), counted apart on Usage, and left out of calls, minutes, the dashboard and AI cost.
+  - **Settings → Platform → Blocked numbers**: super admins block numbers for every organisation.
+  - A new permission, **Block callers** (`calls.block`), for Owners, Admins, Managers and Receptionists. Blocking, unblocking, auto-blocking and changes to what blocked callers get are in the audit log.
+- **Notice frustrated callers** (#42), in Settings → Voice and greeting, on by default. When a caller asks for a person, repeats themselves, says they're unhappy, sounds upset, or Keeva can't help them twice, she flags the call and offers a person.
+  - **What the receptionist does then:** **Offer to put them through** (the default), or **Put them through automatically**: to the right department if she knows it, otherwise the fallback extension. If nobody answers, or the office is closed, she takes an urgent message.
+  - Keeva notices the signs herself. Keevah also checks the transcript for a caller asking for a real person, the same request said twice, and Keeva saying twice that she doesn't have the information. A raised voice isn't measured; Keeva hears the caller's tone.
+  - **Live calls** on the dashboard shows **Needs attention** with the reason (a red badge with an icon and the words), so a receptionist can take the call. Screen readers hear how many calls need attention.
+  - **Call logs**: a **Needs attention** badge, the reason on the call's page, a filter "Only calls that needed attention", and a `needs_attention` column in the CSV export.
+- **Webhooks and an API for other systems** (#40), in a new **Settings → Integrations** group, for Owners and Admins (a new permission, *Manage webhooks and API tokens*, for custom roles). [docs/api.md](docs/api.md) is the reference, with curl examples and how to check a signature in Python and Node.
+  - **Webhooks:** an address, the events to send (`call.started`, `call.ended`, `message.taken`, `call.transferred`, `appointment.booked`) and a signing secret, shown once and replaceable. Each request carries the call's id, times, caller number, outcome, summary and action items; the transcript only with **Include transcript** on, which only someone who reads transcripts can switch on. Requests are signed (`Keevah-Signature: t=…,v1=…`, HMAC-SHA256 of the time and the body).
+  - Events are queued with the change they describe and sent by a background job: 10-second timeout, retried with growing gaps for about a day, then marked failed. Each webhook has a delivery log (result, tries, status code, time taken, a short reason) with **Resend** and **Send test**. A webhook failing for more than a day is switched off and its owners are emailed.
+  - Webhooks only go to `https://` addresses in production, never to private, loopback or link-local ones: the address is checked each time it's sent to, and redirects aren't followed. `WEBHOOKS_ALLOW_PRIVATE_TARGETS=true` lifts that on a development machine.
+  - **API tokens:** a name, what it can do (`calls:read`, `messages:read`, `messages:write`), and an expiry of 30, 90 or 365 days or never. Shown once and stored only as a hash; revoke at any time; the list shows when each was last used. Nobody can give a token more than they can do.
+  - **`/api/v1`:** list calls (dates, outcome, caller number, pages) and get one, list messages (waiting, returned or all), mark a message returned. `Authorization: Bearer kv_…` only, never cookies; 120 requests a minute per token; a token only ever sees its own organisation.
+  - The audit log records webhooks added, changed, switched off and deleted, new secrets, and tokens made and revoked, never a secret or token. Tokens and secrets are taken out of the logs. Clear history also erases what webhooks sent about the calls.
+- **Returning callers** (#41): Keeva knows when a number has called before.
+  - At the start of a call the number is looked up in Contacts first, then in the organisation's recent calls. Numbers are matched in international form (+971…), so local and international forms are the same caller.
+  - Keeva is told only the caller's name, if known, and whether a message they left is still waiting (which day, which department). She treats caller ID as unconfirmed: she checks before using the name ("Is that Sara?"), mentions the message only when the caller asks or it's clearly why they're calling, and never shares call details or private information because of it.
+  - Callers who give their name are saved as contacts marked **From a call**. A number that's already a contact keeps its name; the new one is shown as a suggestion to use or keep. Staff extensions, blocked numbers and test calls are never saved.
+  - Settings → Contacts → **Returning callers**: Recognise returning callers (on; look back 30 days), Save callers as contacts (on), and the country code for local numbers (971).
+  - **Contacts** (was Dial-out contacts): filter by From a call, Dial-out or Added by an admin; merge two contacts for the same person; each contact shows its last call and number of calls, with a link to its calls in Call logs. Merges are in the audit log.
+  - Contacts from calls follow data retention: removed when the caller hasn't called within the retention period.
+
 ## [1.15.0] - 2026-11-12
 
 **Back up before every update, roll back from the dashboard, and keep secrets out of the logs.**

@@ -4,6 +4,26 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.14.2] - 2026-11-12
+
+**Callers hear your waiting audio on every transfer, backup folders can be created from the dashboard, and the voice picker is one short list.**
+
+### Changed
+- Settings → Voice and greeting: the ten voice cards are now one compact **Receptionist voice** list (#20). Voices are grouped by Female and Male, each shown as name, gender and style (for example "Kore — Female · Firm"), with the default marked "(Default)". Under the list is the picked voice's gender, style and description. **Preview** plays the voice picked in the list, before you save; callers keep hearing the saved voice until you press **Save**, and the page says so.
+
+### Fixed
+- Settings → Backups: a backup folder that doesn't exist can now be created from the dashboard (#24). When Test connection says the folder is missing and Keevah can write to the folder it would be in, the page offers **Create folder**. It asks first, creates only that folder (mode 700, owned by Keevah's service user), records it in the audit log and tests again.
+  - Keevah never creates a folder where a NAS should be: if the folder, or a folder it's in, is listed in `/etc/fstab` but isn't mounted, it says "This looks like a NAS mount point that isn't mounted. Mount the NAS, then test again." and offers no Create folder. Backups never fall back to the local disk, even when an empty folder is already there where the NAS should be.
+  - Each problem has its own message and next step: the folder is missing, the folder it would be in is missing, Keevah can't create it there, Keevah isn't allowed into it (such as a home folder), a NAS isn't mounted, it's a file, or Keevah can't write to it.
+  - A folder open to other users passes the test with a warning and the command to close it (`chmod 700`).
+  - The README has a new section, "Choosing a backup folder", with the commands to create the folder by hand and to mount a NAS.
+- Cold transfers, the caller pressing 0 and the fallback after a problem now play the waiting audio that's set, instead of the phone system's default music or plain ringing (#30).
+  - The department's own waiting audio plays when it has one, otherwise the organisation's, with the waiting messages at the set interval. Hold tone, built-in music and your own audio all play as chosen. Silence rings.
+  - Staff dialling out to an outside number hear ringing, like any outgoing call.
+  - Keevah writes each organisation's waiting audio as Asterisk music on hold (`ASTERISK_CONFIG_DIR/musiconhold.conf` and `moh/`), again whenever it changes. A change takes effect on the next call, without restarting Asterisk.
+  - If an upload can't be read, callers hear the hold tone. If the audio can't be written, System health → Waiting audio says so.
+- **Upgrading:** run the installer again (updating from System health does this). It adds the music on hold folder and its `#include`, and updates the `[ai-transfer]` it wrote. Set up by hand: copy the new `[ai-transfer]`, and the `Set(AI_MOH_CLASS=…)` and fallback `Dial(…)` lines of `[from-acme]`, from `asterisk/extensions.conf.example`, then run `asterisk -rx "dialplan reload"`. Until then transferred callers hear Asterisk's default music, as before.
+
 ## [1.14.1] - 2026-11-10
 
 **The receptionist gives contact details exactly as your website has them, and never makes them up.**

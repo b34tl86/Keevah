@@ -4,6 +4,38 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.15.0] - 2026-11-12
+
+**Back up before every update, roll back from the dashboard, and keep secrets out of the logs.**
+
+### Added
+- `LOG_LEVEL` setting: `DEBUG`, `INFO`, `WARNING`, `ERROR` or `CRITICAL`; empty means `INFO` (#11). The README has a new section, "Logs".
+- The release checks every package, and the dashboard build, for source maps, debug symbols (`.pdb`) and development files (`__pycache__`, `.env`, `.git`, `node_modules`), and stops if it finds any (`packaging/check_release_artifact.py`, #11). The CI build of the dashboard runs the same check.
+- System health → Updates: **Back up first**, in both Update now and Schedule, ticked by default (#31).
+  - With backups set up, a full backup goes to the backup location before updating. The dialog names the location (never its credentials) with its free space. The backup is kept out of automatic clean-up and labelled "Before update to X". Update now can also download a copy; the update waits until it's downloaded.
+  - Without backups set up, the dialog offers: **Download a backup to this computer, then update** (a one-off encrypted backup, to the saved age key or a public key pasted in the dialog), **Set up backups** (opens Settings → Backups, with a link back), or **Update without a backup**.
+  - Updating without a backup needs "I understand I can't roll back without a backup" ticked, and is recorded in the audit log ("Chose to update without a backup first").
+  - The dialog shows when the last backup was taken ("Last backup: 3 days ago").
+  - A scheduled update booked without backups says so. It takes a backup after all if they're set up by then. Every super admin gets a reminder email an hour before it runs, saying whether a backup will be taken.
+  - The progress shows **Backing up first**. After the update, the page shows the backup's label and where it is, with a link to roll back. A failed backup still stops the update, with the reason.
+- **Settings → Version**: roll back to an earlier version from the dashboard (#19), super admins only.
+  - Lists the installed version and the last two installed before it, with when and by whom.
+  - **Roll back** asks for your password and which data to keep: **Keep today's data** (only the code goes back; the default) or **Restore the backup taken before the update** (with its private key, used once; the dialog says how many calls would be lost).
+  - A release older versions can't run on is listed in code with its reason; rolling back past it offers only the restore.
+  - Keevah restarts on the earlier version and must pass a health check before the rollback counts as done; otherwise the version you had is put back. Calls during the restart go to the fallback extension, as in any restart.
+  - Super admins are emailed when a rollback starts and when it finishes. The audit log records who, from which version to which, the data choice and the result.
+  - **Automatic rollback** (off by default): when an update fails its health check, the previous version is put back (code only) and super admins are emailed.
+  - Downloadable packages: the page says to install the previous release's package, with a link.
+- Updates now finish with a **health check**: Keevah must answer and its services must be running. An update that fails it is reported as failed (or put back, with automatic rollback).
+- **Upgrading:** updating from System health installs the new updater as part of the update; nothing to do by hand. The installer starts `/var/lib/keevah-update/history.json` (the versions installed here), so the version you're updating from can be rolled back to. Installed by hand: run the installer again.
+
+### Changed
+- The backend now logs its own messages at `INFO` by default (before, only warnings showed). Chatty libraries (httpx, websockets, google-genai and others) stay at `WARNING`, even with `LOG_LEVEL=DEBUG`, because at debug level they print whole requests, AI instructions included (#11).
+
+### Security
+- Keys, tokens and passwords are taken out of every log line of the backend and the telephony service, including error tracebacks and the web server's request lines, and replaced with `[REDACTED]` (#11). This covers Google/Gemini, OpenAI, Anthropic, GitHub and AWS keys, age secret keys, private keys, JWTs, `Bearer` tokens, `password=`/`secret=`/`token=`/`api_key=` in links, forms and JSON, passwords in `user:password@` links, the secret settings' exact values, and keys and passwords saved in the dashboard once they are used.
+- The telephony service no longer logs the backend's reply when a call record or live update is refused: a validation error repeats what was sent, which could be a call's transcript. It logs the field and the reason only (#11).
+
 ## [1.14.2] - 2026-11-12
 
 **Callers hear your waiting audio on every transfer, backup folders can be created from the dashboard, and the voice picker is one short list.**

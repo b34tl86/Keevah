@@ -4,6 +4,14 @@ What's new in each Keevah release, in plain words. Downloads and release notes a
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and Keevah uses [Semantic Versioning](https://semver.org/).
 
+## [1.16.1] - 2026-11-13
+
+**The dashboard shows what changed: numbers roll into place and new callers drop into Live calls. The sidebar collapses without re-laying out the page on every frame.**
+
+### Changed
+- **Dashboard motion.** The five headline numbers and the live call count roll into place when they change, as values on the board already do. A caller who comes in while the dashboard is open drops into Live calls, and a call that has just ended fades in as it wraps up. Calls already on the line when the page opens stay still. Every move uses transform and opacity only, and none play under reduced motion.
+- **Smoother sidebar collapse.** The page beside the sidebar now moves once instead of being re-laid out on every frame of the slide. Badges no longer animate every property that changes.
+
 ## [1.16.0] - 2026-11-12
 
 **Keeva books appointments, recognises returning callers, notices frustrated callers and blocks spam; webhooks and an API connect other systems; and one caller's data can be found, exported or erased.**
